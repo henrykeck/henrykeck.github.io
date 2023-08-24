@@ -41,6 +41,11 @@ main {
     margin-top: 70px;  /* Give space for the fixed header */
 }
 
+#company-logo {
+    width: 150px;
+    height: auto;
+}
+
 .inspirational {
     position: relative;
     width: 100%;
