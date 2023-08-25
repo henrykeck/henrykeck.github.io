@@ -91,6 +91,30 @@ main {
     margin: 0;
 }
 
+/* Serving the Pacific Northwest section */
+.serving {
+    position: relative;
+    width: 100%;
+    padding: 40px 0; /* You can adjust this padding as needed */
+    background-image: url('artifacts/marble_wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* I set the default text color to white for readability on dark backgrounds. Adjust as needed. */
+}
+
+.dave-portrait {
+    width: 30%; /* Adjust this based on how large you want the image to be */
+    margin-left: 5%; /* Some margin from the left */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+}
+
+.serving-content {
+    width: 60%; /* The width of the content next to Dave's image */
+    margin-right: 5%; /* Some margin from the right */
+}
+
 .info-section {
     display: flex;
     justify-content: space-between;
