@@ -96,7 +96,7 @@ main {
     display: flex;
     position: relative;
     width: 100%;
-    padding: 40px 0; /* You can adjust this padding as needed */
+    padding: 40px 40px 40px 40px; /* You can adjust this padding as needed */
     background-image: url('artifacts/marble_wallpaper.jpg');
     background-size: cover;
     background-position: center;
