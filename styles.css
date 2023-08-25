@@ -49,6 +49,11 @@ main {
     height: auto;
 }
 
+#company-logo-slim {
+    width: 300px;
+    height: auto;
+}
+
 .inspirational {
     position: relative;
     width: 100%;
