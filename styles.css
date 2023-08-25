@@ -94,28 +94,47 @@ main {
 .wall-coverings {
     max-width: 1260px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 150px));
     gap: 20px;
     padding: 40px 0;
     overflow-x: hidden;
 }
 
 .grid-item {
+    width: 150px;
+    height: 150px;
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: -16px 0 32px rgba(0, 0, 0, 0.5);
+    box-shadow: -8px 8 16px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     transition: transform 250ms, box-shadow 250ms;
 
     /* Ensuring square shape */
-    aspect-ratio: 1 / 1;  /* This property is supported in modern browsers to enforce aspect ratios */
+    /* aspect-ratio: 1 / 1;  This property is supported in modern browsers to enforce aspect ratios */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;  /* Setting text color to white for better visibility */
+    color: rgb(29, 29, 29);  /* Setting text color to white for better visibility */
 
+    /* Transparent background for text using a pseudo-element */
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+        z-index: -1;  /* Place it behind the text */
+        border-radius: 8px;  /* Adjust if necessary */
+    }
+
+    /* Enhancing text visibility */
+    padding: 10px; /* Adds space around the text */
+    font-weight: bold;  /* Makes the text bold for better readability */
+        
     /* Hover effect */
     &:hover {
         transform: rotate(3deg) scale(1.05);  /* Rotate and slightly scale up */
