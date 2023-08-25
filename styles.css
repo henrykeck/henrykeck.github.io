@@ -93,6 +93,7 @@ main {
 
 /* Serving the Pacific Northwest section */
 .serving {
+    display: flex;
     position: relative;
     width: 100%;
     padding: 40px 0; /* You can adjust this padding as needed */
@@ -100,7 +101,7 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white; /* I set the default text color to white for readability on dark backgrounds. Adjust as needed. */
+    /* color: white; I set the default text color to white for readability on dark backgrounds. Adjust as needed. */
 }
 
 .dave-portrait {
@@ -113,6 +114,10 @@ main {
 .serving-content {
     width: 60%; /* The width of the content next to Dave's image */
     margin-right: 5%; /* Some margin from the right */
+    background-color: rgba(0, 0, 0, 0.6); /* Adding the transparent background */
+    padding: 20px;  /* Padding like in .overlay-text */
+    border-radius: 10px; /* Adding the border radius */
+    color: rgb(230, 230, 230); /* Setting the text color to a light color for better readability */
 }
 
 .info-section {
