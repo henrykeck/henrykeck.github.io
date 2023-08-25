@@ -106,6 +106,42 @@ main {
     transition: background-color 0.3s;
 }
 
+.grid-item:nth-child(1) {
+    background-image: url('artifacts/sisal_square.jpg');
+}
+
+.grid-item:nth-child(2) {
+    background-image: url('artifacts/sisal_square.jpg');
+}
+
+.grid-item:nth-child(3) {
+    background-image: url('artifacts/sisal_square.jpg');
+}
+
+.grid-item:nth-child(4) {
+    background-image: url('artifacts/sisal_square.jpg');
+}
+
+.grid-item:nth-child(5) {
+    background-image: url('artifacts/sisal_square.jpg');
+}
+
+.grid-item:nth-child(6) {
+    background-image: url('artifacts/sisal_square.jpg');
+}
+
+.grid-item:nth-child(7) {
+    background-image: url('artifacts/sisal_square.jpg');
+}
+
+.grid-item:nth-child(8) {
+    background-image: url('artifacts/sisal_square.jpg');
+}
+
+.grid-item:nth-child(9) {
+    background-image: url('artifacts/sisal_square.jpgg');
+}
+
 .grid-item:hover {
     background-color: #f0f0f0;
 }
