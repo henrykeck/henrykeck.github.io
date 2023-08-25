@@ -138,11 +138,11 @@ main {
     color: black;
 }
 .grid-item:nth-child(1) {
-    background-image: url('artifacts/sisal_square.jpg');
+    background-image: url('artifacts/residential_square.jpg');
 }
 
 .grid-item:nth-child(2) {
-    background-image: url('artifacts/sisal_square.jpg');
+    background-image: url('artifacts/commercial_square.jpg');
 }
 
 .grid-item:nth-child(3) {
@@ -150,7 +150,7 @@ main {
 }
 
 .grid-item:nth-child(4) {
-    background-image: url('artifacts/sisal_square.jpg');
+    background-image: url('artifacts/mural_square.jpg');
 }
 
 .grid-item:nth-child(5) {
@@ -162,15 +162,15 @@ main {
 }
 
 .grid-item:nth-child(7) {
-    background-image: url('artifacts/sisal_square.jpg');
+    background-image: url('artifacts/wood_square.jpg');
 }
 
 .grid-item:nth-child(8) {
-    background-image: url('artifacts/sisal_square.jpg');
+    background-image: url('artifacts/panel_square.jpg');
 }
 
 .grid-item:nth-child(9) {
-    background-image: url('artifacts/sisal_square.jpg');
+    background-image: url('artifacts/foil_square.jpg');
 }
 
 /* .grid-item:hover {
