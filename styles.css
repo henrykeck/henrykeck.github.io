@@ -104,6 +104,9 @@ main {
     text-align: center;
     border-radius: 10px;
     transition: background-color 0.3s;
+    background-size: cover; /* This will cover the entire div */
+    background-position: center; /* This will center the image in the div */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
 }
 
 .grid-item:nth-child(1) {
