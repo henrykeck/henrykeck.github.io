@@ -99,11 +99,11 @@ main {
 }
 
 .grid-item {
-    padding: 20px;
+    /* padding: 20px;
     border: 1px solid black;
     text-align: center;
     border-radius: 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; */
     background-size: cover; /* This will cover the entire div */
     background-position: center; /* This will center the image in the div */
     background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -145,9 +145,9 @@ main {
     background-image: url('artifacts/sisal_square.jpgg');
 }
 
-.grid-item:hover {
+/* .grid-item:hover {
     background-color: #f0f0f0;
-}
+} */
 
 /* Footer */
 footer {
