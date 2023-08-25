@@ -93,43 +93,35 @@ main {
 
 .wall-coverings {
     max-width: 1260px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 40px 0;
     overflow-x: hidden;
 }
 
 .grid-item {
-    flex: 0 0 calc(33.33% - 20px); /* Subtracting the gap to adjust width */
-    height: 0;
-    padding-top: calc(33.33% - 20px); /* This creates a square grid-item */
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: -16px 0 32px rgba(0, 0, 0, 0.5);
-    border-radius: 10px; /* You can adjust this as per requirement */
-    transition: transform 250ms;
+    border-radius: 10px;
+    transition: transform 250ms, box-shadow 250ms;
 
-    /* Making sure text is centered */
+    /* Ensuring square shape */
+    aspect-ratio: 1 / 1;  /* This property is supported in modern browsers to enforce aspect ratios */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white; /* Setting the text color to white for better visibility */
-}
+    color: white;  /* Setting text color to white for better visibility */
 
-.grid-item:not(:last-child) {
-    margin-right: -130px;
-}
-
-.grid-item:hover {
-    transform: rotate(3deg);
-    z-index: 1;
-}
-
-.grid-item:hover ~ .grid-item {
-    transform: translateX(130px);
+    /* Hover effect */
+    &:hover {
+        transform: rotate(3deg) scale(1.05);  /* Rotate and slightly scale up */
+        z-index: 1;  /* Ensure hovered item is above others */
+        box-shadow: -8px 8px 16px rgba(0, 0, 0, 0.5);  /* Enhanced shadow for depth */
+    }
 }
 
 .grid-item:nth-child(1) {
