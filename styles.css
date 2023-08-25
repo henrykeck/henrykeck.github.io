@@ -39,6 +39,9 @@ nav li a:hover {
 /* Main Content */
 main {
     margin-top: 70px;  /* Give space for the fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* This should center all child items */
 }
 
 #company-logo {
@@ -86,7 +89,8 @@ main {
 
 .info-section img {
     flex: 1;
-    max-width: 100%;
+    width: 80%;
+    max-width: 600px;
     height: auto;
     border-radius: 10px;
 }
