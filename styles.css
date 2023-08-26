@@ -17,7 +17,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    border-bottom: 4px solid black;
+    border-bottom: 2px solid black;
     position: fixed;
     top: 0;
     left: 0;
@@ -91,60 +91,41 @@ main {
     margin: 0;
 }
 
-.combined-section {
-    width: 90%;
-    max-width: 1600px;
-    margin: 0 auto;
-    overflow: hidden; /* This is to make sure the pseudo-elements don't overflow the container */
-}
-
 /* Serving the Pacific Northwest section */
 .serving {
     display: grid;
-    width: 100%; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Consolidated for simplicity */
     position: relative;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 20px;
-    padding: 20px 0; /* Only padding top and bottom */
-    max-height: 600px;
-    overflow: hidden;
-    background-color: transparent;
-    border-radius: 10px;
-}
-
-/* Using pseudo-element for the background image */
-.serving::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: calc(40% + 20px); /* Start from where .text-content ends including its padding */
-    right: calc(40% - 20px); /* Ensure we leave out the space taken by the image and its max-width */
-    bottom: 0;
+    width: 100%;
+    padding: 40px;
     background-image: url('artifacts/marble_wallpaper.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;
-    border-radius: 10px;
+    max-height: 600px;
+    overflow: hidden;
+    margin-top: 40px;
+    box-sizing: border-box; /* This ensures padding is included in the width */
 }
-
 
 .dave-portrait {
     width: 60%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    margin: 0 auto 20px auto; /* 20px bottom margin for padding effect */
+    margin: 20px auto 20px auto; /* This adds a bottom margin of 20px */
 }
 
+
 .serving-content {
-    grid-column: 1 / 4; /* Spanning all three columns */
-    width: calc(100% - 40px); /* 20px padding on both left and right */
-    background-color: rgba(230, 230, 230, 0.6);
-    padding: 40px 20px; /* 40px top-bottom, 20px left-right */
+    width: auto; /* Let the content dictate the width */
+    background-color: rgba(22, 22, 22, 0.6);
+    padding: 20px;
     border-radius: 10px;
-    color: rgb(22, 22, 22);
-    margin: 0 20px 20px 20px; /* Add left and right margins to match the padding */
+    color: rgb(230, 230, 230);
+    display: inline-flex;
+    flex-direction: column;
 }
 
 
