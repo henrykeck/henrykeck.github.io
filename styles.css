@@ -94,7 +94,7 @@ main {
 /* Serving the Pacific Northwest section */
 .serving {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr; 
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
     gap: 20px;
     position: relative;
     width: 100%;
@@ -104,7 +104,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     max-height: 600px;
-    overflow: hidden;
+    overflow: hidden; /* Hide any content that goes beyond the max height */
     margin-top: 40px; 
 }
 
