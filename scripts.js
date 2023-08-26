@@ -51,3 +51,31 @@ function getDescription(type, targetDiv) {
             targetDiv.innerHTML = 'Description not found.';
         });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.querySelector(".contact-form");
+    contactForm.addEventListener("submit", function(e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        const firstName = document.querySelector("#first-name").value;
+        const lastName = document.querySelector("#last-name").value;
+        const email = document.querySelector("#email").value;
+        const phoneNumber = document.querySelector("#phone-number").value;
+        const installationType = document.querySelector("#installation-type").value;
+        const message = document.querySelector("#message").value;
+
+        // Format the email content
+        const emailBody = `
+        First Name: ${firstName}
+        Last Name: ${lastName}
+        Email: ${email}
+        Phone Number: ${phoneNumber}
+        Installation Type: ${installationType}
+        Message:
+        ${message}
+        `;
+
+        // Open the default mail client
+        window.location.href = `mailto:henry@keckpaperhanging.com?subject=Contact Request from ${firstName} ${lastName}&body=${encodeURIComponent(emailBody)}`;
+    });
+});
