@@ -101,6 +101,7 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    max-height: 600px;
     /* color: white; I set the default text color to white for readability on dark backgrounds. Adjust as needed. */
 }
 
