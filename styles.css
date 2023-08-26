@@ -94,8 +94,8 @@ main {
 /* Serving the Pacific Northwest section */
 .serving {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr; /* Adjust the fr units as needed to control the column widths */
-    gap: 20px; /* Adjust the gap between columns as needed */
+    grid-template-columns: 1fr 2fr 2fr; 
+    gap: 20px;
     position: relative;
     width: 100%;
     padding: 40px;
@@ -104,24 +104,24 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     max-height: 600px;
-    margin-top: 40px; /* Padding between the previous section and this one */
+    overflow: hidden;
+    margin-top: 40px; 
 }
 
 .dave-portrait {
-    max-height: 500px;
-    width: 100%;  /* This ensures that the photo takes the full width of its column */
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .serving-content {
-    width: 100%; /* Ensures the content takes up the full width of its column */
+    width: 100%;
     background-color: rgba(22, 22, 22, 0.6);
     padding: 20px;
     border-radius: 10px;
     color: rgb(230, 230, 230);
 }
-
 
 
 .info-section {
