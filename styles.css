@@ -192,10 +192,9 @@ main {
 }
 
 .wall-covering-description {
-    flex-basis: 35%; /* Adjust as needed */
-    padding: 10px;
-    border-left: 1px solid #ccc;
-    background-color: #f7f7f7; /* Optional: add a subtle background to the description area */
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .grid-item {
