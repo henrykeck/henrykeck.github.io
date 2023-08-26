@@ -97,10 +97,9 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px 20px;
     position: relative;
-    width: 90%; /* Adjust this to your liking to make it narrower */
-    max-width: 1200px; /* Setting a max width to prevent it from becoming too wide on large screens */
-    margin: 40px auto; /* Vertically space it by 40px and auto margin for centering */
-    padding: 40px 40px;
+    width: 100%; 
+    margin: 40px 0; /* This centers the section while allowing for vertical space */
+    padding: 20px 40px; /* 40px on the sides to match the .info-section padding */
     max-height: 600px;
     overflow: hidden;
     background-color: transparent;
@@ -112,8 +111,8 @@ main {
     content: "";
     position: absolute;
     top: 0;
-    left: 0; /* Adjusted to align with the section's padding */
-    right: 0; /* Adjusted to align with the section's padding */
+    left: 40px; /* Match the padding of the parent .serving section */
+    right: 40px; /* Match the padding of the parent .serving section */
     bottom: 0;
     background-image: url('artifacts/marble_wallpaper.jpg');
     background-size: cover;
