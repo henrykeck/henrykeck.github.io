@@ -92,7 +92,7 @@ main {
 }
 
 .content-container {
-    max-width: 80%; /* This can be adjusted according to your site design */
+    max-width: 100%; /* This can be adjusted according to your site design */
     margin: 0 auto; /* This centers the container */
     padding: 0 40px; /* 40px padding on the left and right */
 }
@@ -100,7 +100,7 @@ main {
 /* Serving the Pacific Northwest section */
 .serving {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 2fr 1fr 2fr;
     gap: 20px;
     position: relative;
     width: 100%; 
@@ -137,9 +137,9 @@ main {
 }
 
 .serving-content {
-    width: 100%;
+    width: calc(100%-20px);
     background-color: rgba(22, 22, 22, 0.6);
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
     border-radius: 10px;
     color: rgb(230, 230, 230);
     margin-bottom: 20px; /* 20px bottom margin for padding effect */
