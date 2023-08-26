@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add .selected to the clicked item
             item.classList.add('selected');
 
-            // Update the description based on clicked item
-            getDescription(item.querySelector('span').textContent.trim());
+            // Fetch and update the description based on clicked item
+            getDescription(item.querySelector('span').textContent.trim(), descriptionDiv);
         });
     });
 
@@ -19,14 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
     gridItems[0].click();
 });
 
-function getDescription(type) {
-    // Convert the type into lowercase and match with the file name format
-    const fileName = type.toLowerCase().replace(/ /g, '_'); // this will convert "Magnetic Dry Erase" to "magnetic_dry_erase"
-    
-    // Construct the URL to the file
+function getDescription(type, targetDiv) {
+    const fileName = type.toLowerCase().replace(/ /g, '_');
     const fileURL = `artifacts/descriptions/${fileName}.txt`;
 
-    // Fetch the content of the file
     fetch(fileURL)
         .then(response => {
             if (!response.ok) {
@@ -35,8 +31,6 @@ function getDescription(type) {
             return response.text();
         })
         .then(text => {
-            const tempDiv = document.createElement('div');
-
             // Split the content by line
             const lines = text.split('\n').filter(line => line.trim() !== '');
 
@@ -49,20 +43,11 @@ function getDescription(type) {
                 }
             }).join('');
 
-            tempDiv.innerHTML = formattedText;
-            
-            // Clear previous content
-            while(descriptionDiv.firstChild) {
-                descriptionDiv.removeChild(descriptionDiv.firstChild);
-            }
-            
-            // Append the new content
-            Array.from(tempDiv.children).forEach(child => {
-                descriptionDiv.appendChild(child);
-            });
+            // Update the target div with the formatted text
+            targetDiv.innerHTML = formattedText;
         })
         .catch(error => {
             console.log('There was a problem with the fetch operation:', error.message);
-            document.querySelector('.wall-covering-description').innerHTML = 'Description not found.';
+            targetDiv.innerHTML = 'Description not found.';
         });
 }
