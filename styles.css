@@ -94,19 +94,32 @@ main {
 /* Serving the Pacific Northwest section */
 .serving {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; /* Consolidated for simplicity */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 20px;
     position: relative;
     width: 100%;
-    padding: 40px;
+    padding: 40px 40px;
+    max-height: 600px;
+    overflow: hidden;
+    margin-top: 40px;
+    background-color: transparent; /* Set the background color to transparent */
+    border-radius: 10px; /* This will round the corners of the entire serving section */
+}
+
+/* Using pseudo-element for the background image */
+.serving::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 40px;
+    right: 40px;
+    bottom: 0;
     background-image: url('artifacts/marble_wallpaper.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    max-height: 600px;
-    overflow: hidden;
-    margin-top: 40px;
-    box-sizing: border-box; /* This ensures padding is included in the width */
+    z-index: -1; /* Ensures it's rendered below the actual content */
+    border-radius: 10px; /* This rounds the corners of the background */
 }
 
 .dave-portrait {
@@ -114,19 +127,18 @@ main {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    margin: 20px auto 20px auto; /* This adds a bottom margin of 20px */
+    margin: 0 auto 20px auto; /* 20px bottom margin for padding effect */
 }
-
 
 .serving-content {
-    width: auto; /* Let the content dictate the width */
+    width: 100%;
     background-color: rgba(22, 22, 22, 0.6);
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
     border-radius: 10px;
     color: rgb(230, 230, 230);
-    display: inline-flex;
-    flex-direction: column;
+    margin-bottom: 20px; /* 20px bottom margin for padding effect */
 }
+
 
 
 .info-section {
