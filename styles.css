@@ -98,7 +98,7 @@ main {
     gap: 20px;
     position: relative;
     width: 100%;
-    padding: 40px;
+    padding: 40px 40px 40px 40px;
     background-image: url('artifacts/marble_wallpaper.jpg');
     background-size: cover;
     background-position: center;
@@ -109,7 +109,7 @@ main {
 }
 
 .dave-portrait {
-    width: 100%;
+    width: 60%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
