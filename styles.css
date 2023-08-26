@@ -172,6 +172,14 @@ main {
     border-radius: 10px;
 }
 
+.wall-coverings-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
 
 .wall-coverings {
     max-width: 1260px;
@@ -181,6 +189,13 @@ main {
     padding: 15px 15px;
     overflow-x: hidden;
     margin: 0 auto;
+}
+
+.wall-covering-description {
+    flex-basis: 35%; /* Adjust as needed */
+    padding: 10px;
+    border-left: 1px solid #ccc;
+    background-color: #f7f7f7; /* Optional: add a subtle background to the description area */
 }
 
 .grid-item {
@@ -206,6 +221,13 @@ main {
         transform: rotate(3deg) scale(1.05);  /* Rotate and slightly scale up */
         z-index: 1;  /* Ensure hovered item is above others */
         box-shadow: -8px 8px 16px rgba(0, 0, 0, 0.5);  /* Enhanced shadow for depth */
+    }
+
+    /* Selected effect */
+    &.selected {
+        border: 5px solid darkgoldenrod;
+        /* Adjust width and height to compensate for the border addition, if necessary */
+        width: calc(200px - 10px); /* Deduct double the border-width to maintain the same size */
     }
 }
 
