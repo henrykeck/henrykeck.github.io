@@ -93,10 +93,9 @@ main {
 
 /* Serving the Pacific Northwest section */
 .serving {
-    display: flex;
-    justify-content: center;  /* This will horizontally center the child elements */
-    align-items: center;      /* This will vertically center the child elements */
-    gap: 40px;                /* This adds space between Dave's photo and the serving-content */
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr; /* Adjust the fr units as needed to control the column widths */
+    gap: 20px; /* Adjust the gap between columns as needed */
     position: relative;
     width: 100%;
     padding: 40px;
@@ -105,22 +104,24 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     max-height: 600px;
-    margin-top: 40px;         /* This adds some space between the serving section and the previous section */
+    margin-top: 40px; /* Padding between the previous section and this one */
 }
 
 .dave-portrait {
     max-height: 500px;
+    width: 100%;  /* This ensures that the photo takes the full width of its column */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .serving-content {
-    width: 60%;
-    background-color: rgba(230, 230, 230, 0.6);
+    width: 100%; /* Ensures the content takes up the full width of its column */
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
-    color: rgb(0, 0, 0);
+    color: rgb(230, 230, 230);
 }
+
 
 
 .info-section {
