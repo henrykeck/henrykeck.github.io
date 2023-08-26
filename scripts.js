@@ -20,35 +20,40 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function getDescription(type) {
-    switch(type) {
-        case 'Residential': 
-            return 'Residential wallpapers offer a wide range of designs and textures suitable for home environments. They add warmth and character to any living space.';
-        
-        case 'Commercial': 
-            return 'Commercial wallpapers are designed for high traffic areas and meet stringent safety and durability standards. They are ideal for businesses and offices.';
-        
-        case 'Fabric': 
-            return 'Fabric wallpapers provide a luxurious and tactile finish to walls, adding a touch of sophistication to any room.';
-        
-        case 'Murals': 
-            return 'Murals are large-scale artworks or photographs that can turn any wall into a stunning focal point. It adds a unique touch to spaces.';
-        
-        case 'Sisal': 
-            return 'Sisal wallpapers are made from natural fibers, giving a rustic and organic texture to walls.';
-        
-        case 'Magnetic Dry Erase': 
-            return 'Magnetic Dry Erase wallpapers are perfect for offices and study rooms, allowing you to write and erase, while also sticking on magnetic objects.';
-        
-        case 'Wood Veneers': 
-            return 'Wood Veneer wallpapers mimic the appearance of wood, providing warmth and elegance without using actual wood planks.';
-        
-        case 'Sound Paneling': 
-            return 'Sound Paneling wallpapers help reduce noise transmission, perfect for home theaters, studios, or any room where acoustic control is desired.';
-        
-        case 'Foils': 
-            return 'Foils wallpapers have a metallic sheen, adding a modern and glitzy touch to spaces. They reflect light and can make a space feel larger.';
-        
-        default: 
-            return '';
-    }
+    // Convert the type into lowercase and match with the file name format
+    const fileName = type.toLowerCase().replace(/ /g, '_'); // this will convert "Magnetic Dry Erase" to "magnetic_dry_erase"
+    
+    // Construct the URL to the file
+    const fileURL = `artifacts/descriptions/${fileName}.txt`;
+
+    // Fetch the content of the file
+    fetch(fileURL)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(text => {
+            // Split the content by line
+            const lines = text.split('\n').filter(line => line.trim() !== '');
+
+            // Format the text
+            const formattedText = lines.map((line, index) => {
+                if (index === 0) {
+                    return `<h2>${line}</h2>`;
+                } else {
+                    return `<p>${line}</p>`;
+                }
+            }).join('');
+
+            // Update the description div with the formatted text
+            document.querySelector('.wall-covering-description').innerHTML = formattedText;
+        })
+        .catch(error => {
+            console.log('There was a problem with the fetch operation:', error.message);
+            document.querySelector('.wall-covering-description').innerHTML = 'Description not found.';
+        });
 }
+
+
