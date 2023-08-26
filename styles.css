@@ -91,30 +91,20 @@ main {
     margin: 0;
 }
 
-/* Serving the Pacific Northwest section */
-.serving {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 20px;
-    position: relative;
-    width: 100%; 
-    margin: 40px 0; /* This centers the section while allowing for vertical space */
-    padding: 20px 40px; /* 40px on the sides to match the .info-section padding */
-    max-height: 600px;
-    overflow: hidden;
-    background-color: transparent;
-    border-radius: 10px;
+.combined-section {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow: hidden; /* This is to make sure the pseudo-elements don't overflow the container */
 }
 
 /* Serving the Pacific Northwest section */
 .serving {
-    display: grid;
+    width: 100%; 
+    position: relative;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px 20px;
-    position: relative;
-    width: 100%; 
-    margin: 40px 0;
-    padding: 20px 0;  /* Only padding top and bottom */
+    padding: 20px 0; /* Only padding top and bottom */
     max-height: 600px;
     overflow: hidden;
     background-color: transparent;
@@ -126,8 +116,6 @@ main {
     content: "";
     position: absolute;
     top: 0;
-    left: calc(50% - 60% / 2 + 20px); /* Calculate the left position based on the text-content */
-    right: calc(50% - 60% / 2 + 20px); /* Calculate the right position based on the image in the info-section */
     bottom: 0;
     background-image: url('artifacts/marble_wallpaper.jpg');
     background-size: cover;
@@ -137,10 +125,18 @@ main {
     border-radius: 10px;
 }
 
+.dave-portrait {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 0 auto 20px auto; /* 20px bottom margin for padding effect */
+}
+
 .serving-content {
     width: calc(100% - 20px);  /* Reduce the width by 20px for the right padding */
     background-color: rgba(22, 22, 22, 0.6);
-    padding: 40px 40px 40px 40px;
+    padding: 40px 20px; /* 40px top-bottom, 20px left-right */
     border-radius: 10px;
     color: rgb(230, 230, 230);
     margin-bottom: 20px; 
