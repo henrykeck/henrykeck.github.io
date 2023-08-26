@@ -94,18 +94,19 @@ main {
 /* Serving the Pacific Northwest section */
 .serving {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Consolidated for simplicity */
     position: relative;
     width: 100%;
-    padding: 40px 40px 40px 40px;
+    padding: 40px;
     background-image: url('artifacts/marble_wallpaper.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     max-height: 600px;
-    overflow: hidden; /* Hide any content that goes beyond the max height */
-    margin-top: 40px; 
+    overflow: hidden;
+    margin-top: 40px;
+    box-sizing: border-box; /* This ensures padding is included in the width */
 }
 
 .dave-portrait {
@@ -113,14 +114,16 @@ main {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 0 auto; /* Centers the image horizontally */
 }
 
 .serving-content {
-    width: 100%;
+    width: auto; /* Let the content dictate the width */
     background-color: rgba(22, 22, 22, 0.6);
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     border-radius: 10px;
     color: rgb(230, 230, 230);
+    display: inline-flex; /* Inline flex will ensure the */
 }
 
 
