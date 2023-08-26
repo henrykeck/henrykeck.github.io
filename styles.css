@@ -97,13 +97,14 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px 20px;
     position: relative;
-    width: 100%;
+    width: 90%; /* Adjust this to your liking to make it narrower */
+    max-width: 1200px; /* Setting a max width to prevent it from becoming too wide on large screens */
+    margin: 40px auto; /* Vertically space it by 40px and auto margin for centering */
     padding: 40px 40px;
     max-height: 600px;
     overflow: hidden;
-    margin-top: 40px;
-    background-color: transparent; /* Set the background color to transparent */
-    border-radius: 10px; /* This will round the corners of the entire serving section */
+    background-color: transparent;
+    border-radius: 10px;
 }
 
 /* Using pseudo-element for the background image */
@@ -111,15 +112,15 @@ main {
     content: "";
     position: absolute;
     top: 0;
-    left: 40px;
-    right: 40px;
+    left: 0; /* Adjusted to align with the section's padding */
+    right: 0; /* Adjusted to align with the section's padding */
     bottom: 0;
     background-image: url('artifacts/marble_wallpaper.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1; /* Ensures it's rendered below the actual content */
-    border-radius: 10px; /* This rounds the corners of the background */
+    z-index: -1;
+    border-radius: 10px;
 }
 
 .dave-portrait {
@@ -133,7 +134,7 @@ main {
 .serving-content {
     width: 100%;
     background-color: rgba(22, 22, 22, 0.6);
-    padding: 20px 20px 20px 20px;
+    padding: 40px 40px 40px 40px;
     border-radius: 10px;
     color: rgb(230, 230, 230);
     margin-bottom: 20px; /* 20px bottom margin for padding effect */
