@@ -224,9 +224,9 @@ main {
 
     /* Selected effect */
     &.selected {
-        border: 5px solid darkgoldenrod;
+        border: 10px solid gold;
         /* Adjust width and height to compensate for the border addition, if necessary */
-        width: calc(200px - 10px); /* Deduct double the border-width to maintain the same size */
+        width: calc(200px - 20px); /* Deduct double the border-width to maintain the same size */
     }
 }
 
