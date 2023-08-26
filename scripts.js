@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             item.classList.add('selected');
 
             // Update the description based on clicked item
-            descriptionDiv.innerHTML = getDescription(item.querySelector('span').textContent.trim());
+            getDescription(item.querySelector('span').textContent.trim());
         });
     });
 
@@ -35,6 +35,8 @@ function getDescription(type) {
             return response.text();
         })
         .then(text => {
+            const tempDiv = document.createElement('div');
+
             // Split the content by line
             const lines = text.split('\n').filter(line => line.trim() !== '');
 
@@ -47,13 +49,20 @@ function getDescription(type) {
                 }
             }).join('');
 
-            // Update the description div with the formatted text
-            document.querySelector('.wall-covering-description').innerHTML = formattedText;
+            tempDiv.innerHTML = formattedText;
+            
+            // Clear previous content
+            while(descriptionDiv.firstChild) {
+                descriptionDiv.removeChild(descriptionDiv.firstChild);
+            }
+            
+            // Append the new content
+            Array.from(tempDiv.children).forEach(child => {
+                descriptionDiv.appendChild(child);
+            });
         })
         .catch(error => {
             console.log('There was a problem with the fetch operation:', error.message);
             document.querySelector('.wall-covering-description').innerHTML = 'Description not found.';
         });
 }
-
-
