@@ -100,6 +100,7 @@ main {
 
 /* Serving the Pacific Northwest section */
 .serving {
+    display: grid;
     width: 100%; 
     position: relative;
     grid-template-columns: repeat(3, 1fr);
@@ -135,15 +136,12 @@ main {
 
 .serving-content {
     width: calc(100% - 20px);  /* Reduce the width by 20px for the right padding */
-    background-color: rgba(22, 22, 22, 0.6);
+    background-color: rgba(230, 230, 230, 0.6);
     padding: 40px 20px; /* 40px top-bottom, 20px left-right */
     border-radius: 10px;
-    color: rgb(230, 230, 230);
+    color: rgb(22, 22, 22);
     margin-bottom: 20px; 
 }
-
-
-
 
 .info-section {
     display: flex;
