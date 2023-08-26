@@ -94,32 +94,34 @@ main {
 /* Serving the Pacific Northwest section */
 .serving {
     display: flex;
+    justify-content: center;  /* This will horizontally center the child elements */
+    align-items: center;      /* This will vertically center the child elements */
+    gap: 40px;                /* This adds space between Dave's photo and the serving-content */
     position: relative;
     width: 100%;
-    padding: 40px 40px 40px 40px; /* You can adjust this padding as needed */
+    padding: 40px;
     background-image: url('artifacts/marble_wallpaper.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     max-height: 600px;
-    /* color: white; I set the default text color to white for readability on dark backgrounds. Adjust as needed. */
+    margin-top: 40px;         /* This adds some space between the serving section and the previous section */
 }
 
 .dave-portrait {
-    width: 30%; /* Adjust this based on how large you want the image to be */
-    margin-left: 5%; /* Some margin from the left */
+    width: 30%;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .serving-content {
-    width: 60%; /* The width of the content next to Dave's image */
-    margin-right: 5%; /* Some margin from the right */
-    background-color: rgba(0, 0, 0, 0.6); /* Adding the transparent background */
-    padding: 20px;  /* Padding like in .overlay-text */
-    border-radius: 10px; /* Adding the border radius */
-    color: rgb(230, 230, 230); /* Setting the text color to a light color for better readability */
+    width: 60%;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
 }
+
 
 .info-section {
     display: flex;
