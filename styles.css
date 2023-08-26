@@ -146,11 +146,10 @@ main {
     overflow: auto;
 }
 
-
 .text-background {
     background-color: rgba(230, 230, 230, 0.8);
     border-radius: 10px;
-    padding: 5px; /* To give some space around text */
+    padding: 20px; /* To give some space around text */
 }
 
 .info-section {
