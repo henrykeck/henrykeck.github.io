@@ -117,6 +117,8 @@ main {
     content: "";
     position: absolute;
     top: 0;
+    left: calc(40% + 20px); /* Start from where .text-content ends including its padding */
+    right: calc(40% - 20px); /* Ensure we leave out the space taken by the image and its max-width */
     bottom: 0;
     background-image: url('artifacts/marble_wallpaper.jpg');
     background-size: cover;
@@ -125,6 +127,7 @@ main {
     z-index: -1;
     border-radius: 10px;
 }
+
 
 .dave-portrait {
     width: 60%;
@@ -135,13 +138,15 @@ main {
 }
 
 .serving-content {
-    width: calc(100% - 20px);  /* Reduce the width by 20px for the right padding */
+    grid-column: 1 / 4; /* Spanning all three columns */
+    width: calc(100% - 40px); /* 20px padding on both left and right */
     background-color: rgba(230, 230, 230, 0.6);
     padding: 40px 20px; /* 40px top-bottom, 20px left-right */
     border-radius: 10px;
     color: rgb(22, 22, 22);
-    margin-bottom: 20px; 
+    margin: 0 20px 20px 20px; /* Add left and right margins to match the padding */
 }
+
 
 .info-section {
     display: flex;
