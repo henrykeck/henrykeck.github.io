@@ -81,8 +81,8 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: rgb(22, 22, 22);
-    background-color: rgba(230, 230, 230, 0.6);
+    color: rgb(230, 230, 230);
+    background-color: rgba(22, 22, 22, 0.6);
     padding: 20px 20px;
     border-radius: 10px;
 }
@@ -116,7 +116,7 @@ main {
 
 .serving-content {
     width: 100%; /* Ensures the content takes up the full width of its column */
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(22, 22, 22, 0.6);
     padding: 20px;
     border-radius: 10px;
     color: rgb(230, 230, 230);
