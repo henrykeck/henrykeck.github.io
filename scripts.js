@@ -51,27 +51,3 @@ function getDescription(type, targetDiv) {
             targetDiv.innerHTML = 'Description not found.';
         });
 }
-
-document.getElementById("quote-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const firstName = document.querySelector("#first-name").value;
-    const lastName = document.querySelector("#last-name").value;
-    const email = document.querySelector("#email").value;
-    const phone = document.querySelector("#phone").value;
-    const installationType = document.querySelector("#installation-type").value;
-    const message = document.querySelector("#message").value;
-
-    const subject = `New Quote Request from ${firstName} ${lastName}`;
-    const body = `
-First Name: ${firstName}
-Last Name: ${lastName}
-Email: ${email}
-Phone Number: ${phone}
-Installation Type: ${installationType}
-Message: ${message}
-    `;
-
-    window.location.href = `mailto:henry@keckpaperhanging.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
-
