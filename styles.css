@@ -274,7 +274,7 @@ ABOUT PAGE'S CSS
 }
 
 .about-content {
-    width: 55%;                /* Sets the width for the content, adjust as per your preference */
+    width: 600px;                /* Sets the width for the content, adjust as per your preference */
 }
 
 .text-background {
