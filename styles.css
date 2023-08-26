@@ -256,6 +256,42 @@ main {
     background-color: #f0f0f0;
 } */
 
+/*
+ABOUT PAGE'S CSS
+*/
+/* Styling for the about section */
+.about {
+    display: flex;             /* This sets up a flexbox layout */
+    justify-content: center;   /* This centers the items horizontally within the flex container */
+    align-items: center;       /* This centers the items vertically within the flex container */
+    padding-top: 50px;         /* Add top padding */
+    padding-bottom: 50px;      /* Add bottom padding */
+}
+
+.dave-portrait {
+    width: 40%;                /* Sets the width for the portrait, you can adjust this */
+    margin-right: 20px;       /* Adds some spacing between the image and the content */
+}
+
+.about-content {
+    width: 55%;                /* Sets the width for the content, adjust as per your preference */
+}
+
+.text-background {
+    padding: 15px;             /* Adds some padding to the textual content for better spacing */
+    background-color: rgba(255, 255, 255, 0.7); /* Optional: If you want a semi-transparent background for better text readability */
+}
+
+/* Adjusting h2 and p for finer typography details, adjust as per your design */
+.about-content h2 {
+    margin-top: 0;
+}
+
+.about-content p {
+    margin-bottom: 1em;
+}
+
+
 /* Footer */
 footer {
     padding: 20px;
