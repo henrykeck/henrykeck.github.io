@@ -137,11 +137,11 @@ main {
 }
 
 .serving-content {
-    width: 80%;
-    background-color: rgba(22, 22, 22, 0.6);
+    width: 90%;
+    background-color: rgba(230, 230, 230, 0.8);
     padding: 20px;
     border-radius: 10px;
-    color: rgb(230, 230, 230);
+    color: rgb(22, 22, 22);
     margin-bottom: 20px; /* 20px bottom margin for padding effect */
     box-sizing: border-box;
     overflow: auto;
