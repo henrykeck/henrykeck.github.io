@@ -79,14 +79,16 @@
             <section class="contact-us">
                 <!-- Left column -->
                 <div class="contact-info">
-                    <h2>Request a Quote</h2>
-                    <p>Interested in wallpaper for your space? It's never been easier to get started. Simply fill out our contact form and a project manager from Keck Paperhanging will get in touch with you promptly.</p>
-                    <p>Alternatively, feel free to give Dave a call directly:</p>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                    <div class="contact-info-content">
+                        <h2>Request a Quote</h2>
+                        <p>Interested in wallpaper for your space? It's never been easier to get started. Simply fill out our contact form and a project manager from Keck Paperhanging will get in touch with you promptly.</p>
+                        <p>Alternatively, feel free to give Dave a call directly:</p>
+                        <p><strong>Phone:</strong> (123) 456-7890</p>
+                    </div>
                 </div>
             
                 <!-- Right column with form -->
-                <div class="contact-form">
+                <!-- <div class="contact-form">
                     <script src="https://cdn03.jotfor.ms/static/prototype.forms.js?3.3.44798" type="text/javascript"></script>
                     <script src="https://cdn01.jotfor.ms/static/jotform.forms.js?3.3.44798" type="text/javascript"></script>
                     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"></script>
@@ -1174,11 +1176,46 @@
                     <script type="text/javascript">JotForm.ownerView=true;</script>
                     <script type="text/javascript">JotForm.showAlternateHIPAABadge=true;</script>
                     <script type="text/javascript">JotForm.isNewSACL=true;</script>
-                </div>
-                
+                </div> -->
+                <div class="contact-form">
+                    <form id="quoteForm">
+                        <!-- Full Name Row -->
+                        <label for="first-name">Full Name:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                        
+                        <!-- Email Row -->
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                        
+                        <!-- Phone Number Row -->
+                        <label for="phone-number">Phone Number:</label>
+                        <input type="text" id="area-code" name="area-code" placeholder="Area Code" required>
+                        <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+                        
+                        <!-- Preferred Form of Contact Row -->
+                        <label for="preferred-contact">Preferred Form of Contact:</label>
+                        <div id="preferred-contact">
+                            <input type="radio" id="morning-call" name="contact-preference" value="Morning Phone Call" required>
+                            <label for="morning-call">Morning Phone Call</label>
+                            
+                            <input type="radio" id="afternoon-call" name="contact-preference" value="Afternoon Phone Call" required>
+                            <label for="afternoon-call">Afternoon Phone Call</label>
+                            
+                            <input type="radio" id="email-contact" name="contact-preference" value="Email" required>
+                            <label for="email-contact">Email</label>
+                        </div>
+                        
+                        <!-- Details Row -->
+                        <label for="details">Details:</label>
+                        <textarea id="details" name="details" rows="5" maxlength="500"></textarea>
+                        
+                        <!-- Craft Email Button -->
+                        <button type="button" onclick="craftEmail()">Craft Email</button>
+                    </form>
+                </div>                
+
             </section>
-            
-            
 
         </main>
 

@@ -51,3 +51,29 @@ function getDescription(type, targetDiv) {
             targetDiv.innerHTML = 'Description not found.';
         });
 }
+
+function craftEmail() {
+    // Get values
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
+    const email = document.getElementById('email').value;
+    const areaCode = document.getElementById('area-code').value;
+    const phone = document.getElementById('phone').value;
+    const contactPreference = document.querySelector('input[name="contact-preference"]:checked').value;
+    const details = document.getElementById('details').value;
+
+    // Create email subject and body
+    const subject = encodeURIComponent(`${firstName} ${lastName}'s Request for Wallpaper Consultation`);
+    const body = encodeURIComponent(
+        `Contact: \n` +
+        `${firstName} ${lastName}\n` +
+        `${email}\n` +
+        `${areaCode} - ${phone}\n` +
+        `Preferred contact: ${contactPreference}\n\n` +
+        `Details:\n` +
+        `${details}`
+    );
+
+    // Open email client
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+}
