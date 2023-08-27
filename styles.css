@@ -313,6 +313,41 @@ ABOUT PAGE'S CSS
 }
 
 
+/*
+CONTACT SECTION
+*/
+.contact-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    padding: 10px;
+}
+
+.contact-form form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+
 /* Footer */
 footer {
     padding: 20px;
