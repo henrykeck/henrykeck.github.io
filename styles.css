@@ -319,19 +319,24 @@ CONTACT SECTION
 .contact-us {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 20px 0;
 }
 
-.contact-info, .contact-form {
+.contact-info {
+    height: 100%; /* Take the full height of the parent */
+    display: flex;
+    align-items: center; /* Center the child div */
+}
+
+.contact-info-content {
+    padding: 20px; /* Apply padding here instead of the parent */
+}
+
+.contact-form {
     flex: 1;
     padding: 20px;
 }
-/* 
-.contact-form form {
-    display: grid;
-    grid-gap: 10px;
-} */
 
 button {
     padding: 10px 15px;
