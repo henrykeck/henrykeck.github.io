@@ -328,25 +328,6 @@ CONTACT SECTION
     padding: 10px;
 }
 
-/* 
-.contact-form form {
-    display: grid;
-    grid-gap: 10px;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-} */
-
 .contact-form {
     background-color: rgba(240, 240, 240, 0.95); /* Slightly darker background with a touch of opacity */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Elevation shadow */
@@ -365,15 +346,46 @@ button:hover {
     grid-column: span 2;
 }
 
-/* For radio buttons to be organized neatly */
+/* Container for radio buttons */
 #preferred-contact {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* provides a consistent gap between radio-button-label pairs */
 }
 
+/* Style for each radio button and its label */
+#preferred-contact input[type="radio"] {
+    margin-right: 5px; /* gives a small gap between the radio button and its label */
+}
+
+#preferred-contact label {
+    display: flex; 
+    align-items: center; /* vertically centers the label text with the radio button */
+}
+
+/* Add rounded edges to input boxes and textarea */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    border-radius: 5px; /* adjust as per your preference */
+    border: 1px solid #ccc; /* This will add a slight border; you can adjust or remove as needed */
+    padding: 5px 10px; /* giving some inner padding for better aesthetics */
+}
+
+/* Adjust the "Craft Email" button */
 button {
-    margin-top: 10px; /* Some spacing above the button */
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; /* This ensures that the button does not stretch */
+    display: inline-block; /* This will make sure the button only takes up the space it needs */
+}
+
+button:hover {
+    background-color: #555;
 }
 
 
