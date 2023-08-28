@@ -352,6 +352,7 @@ CONTACT SECTION
     flex-direction: column; /* Change to row orientation */
     gap: 10px; /* Adjust for horizontal space between radio groups */
     flex-wrap: wrap; /* If the width is limited, they will move to the next line */
+    margin-bottom: 10px;
 }
 
 .radio-group {
