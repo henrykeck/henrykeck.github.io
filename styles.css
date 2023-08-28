@@ -345,7 +345,7 @@ CONTACT SECTION
 .contact-form {
     background-color: rgba(240, 240, 240, 0.95); /* Slightly darker background with a touch of opacity */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Elevation shadow */
-    padding: 20px; /* Increased padding for better appearance */
+    padding: 10px; /* Increased padding for better appearance */
     border-radius: 5px; /* Slight rounding of corners */
 }
 
