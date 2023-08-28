@@ -75,5 +75,5 @@ function craftEmail() {
     );
 
     // Open email client
-    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:dave@keckpaperhanging.com?subject=${subject}&body=${body}`;
 }
