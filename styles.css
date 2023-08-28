@@ -356,8 +356,8 @@ CONTACT SECTION
 
 .radio-group {
     display: flex; /* This will make sure each radio button and its label are side-by-side */
-    align-items: column; /* This will ensure they're vertically aligned in the center */
-    margin-right: 10px; /* Space between each radio group */
+    align-items: center; /* This will ensure they're vertically aligned in the center */
+    margin-bottom: 5px; /* Space between each radio group */
 }
 
 /* Add rounded edges to input boxes and textarea */
