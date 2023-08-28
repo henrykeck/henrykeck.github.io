@@ -320,13 +320,21 @@ CONTACT SECTION
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px 0;
+    padding: 20px 20px 20px 20px;
 }
 
 .contact-info, .contact-form {
     flex: 1;
     padding: 10px;
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
 }
+
+/* .contact-info, .contact-form {
+    flex: 1;
+    padding: 10px;
+} */
 
 .contact-form {
     background-color: rgba(240, 240, 240, 0.95); /* Slightly darker background with a touch of opacity */
