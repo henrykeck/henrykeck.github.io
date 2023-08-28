@@ -378,7 +378,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     width: auto; /* This ensures that the button does not stretch */
-    display: inline-block; /* This will make sure the button only takes up the space it needs */
+    display: block; /* This will make sure the button only takes up the space it needs */
+    margin: 10px auto;
 }
 
 button:hover {
