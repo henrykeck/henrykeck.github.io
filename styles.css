@@ -329,12 +329,8 @@ CONTACT SECTION
     display: flex; /* Enables flexbox */
     align-items: center; /* Vertically centers the content */
     justify-content: center; /* Horizontally centers the content */
+    margin: 30px;
 }
-
-/* .contact-info, .contact-form {
-    flex: 1;
-    padding: 10px;
-} */
 
 .contact-info-content {
     text-align: left;
