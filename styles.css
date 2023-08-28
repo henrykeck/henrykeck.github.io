@@ -337,6 +337,7 @@ CONTACT SECTION
 } */
 
 .contact-info-content {
+    text-align: center;
     width: 100%;    /* Takes up full width */
 }
 
