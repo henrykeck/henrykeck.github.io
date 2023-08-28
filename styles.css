@@ -349,7 +349,7 @@ CONTACT SECTION
 /* Container for radio buttons */
 #preferred-contact {
     display: flex;
-    flex-direction: row; /* Change to row orientation */
+    flex-direction: column; /* Change to row orientation */
     gap: 10px; /* Adjust for horizontal space between radio groups */
     flex-wrap: wrap; /* If the width is limited, they will move to the next line */
 }
@@ -357,6 +357,7 @@ CONTACT SECTION
 .radio-group {
     display: flex; /* This will make sure each radio button and its label are side-by-side */
     align-items: center; /* This will ensure they're vertically aligned in the center */
+    margin-right: 10px;
     margin-bottom: 5px; /* Space between each radio group */
 }
 
