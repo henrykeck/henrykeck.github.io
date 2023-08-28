@@ -353,15 +353,19 @@ CONTACT SECTION
     gap: 5px; /* provides a consistent gap between radio-button-label pairs */
 }
 
-/* Style for each radio button and its label */
+/* Style for radio buttons and their labels */
 #preferred-contact input[type="radio"] {
-    margin-right: 5px; /* gives a small gap between the radio button and its label */
+    display: inline-block;
+    margin-right: 5px; /* Spacing between the radio button and its label */
+    vertical-align: middle; /* Ensures vertical centering with the label */
 }
 
 #preferred-contact label {
-    display: flex; 
-    align-items: center; /* vertically centers the label text with the radio button */
+    display: inline-block;
+    margin-right: 15px; /* Spacing between one radio-label pair and the next */
+    vertical-align: middle; /* Ensures vertical centering with the radio button */
 }
+
 
 /* Add rounded edges to input boxes and textarea */
 .contact-form input[type="text"],
