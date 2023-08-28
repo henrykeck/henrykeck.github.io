@@ -408,14 +408,23 @@ button:hover {
 
 /* Footer */
 footer {
-    padding: 20px;
+    padding: 10px; /* reduced from 20px */
     background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px; /* reduced from 20px */
+}
+
+#company-logo {
+    margin-bottom: 10px; /* bring the logo closer to the .footer-contact-info div */
 }
 
 .footer-contact-info p {
-    margin-bottom: 5px;
+    margin-bottom: 3px; /* reduced from 5px to bring the texts closer together */
+}
+
+/* reduce space at the top and bottom of the copyright to bring it closer */
+footer > p {
+    margin: 5px 0; 
 }
