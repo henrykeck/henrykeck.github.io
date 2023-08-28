@@ -349,21 +349,19 @@ CONTACT SECTION
 /* Container for radio buttons */
 #preferred-contact {
     display: flex;
-    flex-direction: column;
-    gap: 5px; /* provides a consistent gap between radio-button-label pairs */
+    flex-direction: row; /* Change to row orientation */
+    gap: 10px; /* Adjust for horizontal space between radio groups */
+    flex-wrap: wrap; /* If the width is limited, they will move to the next line */
 }
 
-/* Style for radio buttons and their labels */
-#preferred-contact input[type="radio"] {
-    display: inline-block;
-    margin-right: 5px; /* Spacing between the radio button and its label */
-    vertical-align: middle; /* Ensures vertical centering with the label */
+.radio-group {
+    display: flex; /* This will make sure each radio button and its label are side-by-side */
+    align-items: center; /* This will ensure they're vertically aligned in the center */
+    margin-right: 10px; /* Space between each radio group */
 }
 
-#preferred-contact label {
-    display: inline-block;
-    margin-right: 15px; /* Spacing between one radio-label pair and the next */
-    vertical-align: middle; /* Ensures vertical centering with the radio button */
+.radio-group input[type="radio"] {
+    margin-right: 5px;  /* Spacing between the radio button and its label */
 }
 
 
