@@ -316,7 +316,7 @@ ABOUT PAGE'S CSS
 /*
 CONTACT SECTION
 */
-/* .contact-us {
+.contact-us {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -328,6 +328,7 @@ CONTACT SECTION
     padding: 10px;
 }
 
+/* 
 .contact-form form {
     display: grid;
     grid-gap: 10px;
