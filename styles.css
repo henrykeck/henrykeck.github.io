@@ -338,6 +338,10 @@ CONTACT SECTION
     width: 100%;    /* Takes up full width */
 }
 
+.contact-info p {
+    margin-bottom: 10px;
+}
+
 .contact-form {
     background-color: rgba(240, 240, 240, 0.95); /* Slightly darker background with a touch of opacity */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Elevation shadow */
@@ -412,6 +416,6 @@ footer {
     gap: 20px;
 }
 
-.contact-info p {
-    margin-bottom: 10px;
+.footer-contact-info p {
+    margin-bottom: 5px;
 }
