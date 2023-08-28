@@ -225,6 +225,7 @@ main {
     /* Selected effect */
     &.selected {
         border: 10px solid gold;
+        width: calc(200px - 20px);
         outline: 10px solid transparent; /* This ensures the total size remains the same */
     }
 }
