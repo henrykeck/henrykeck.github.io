@@ -577,6 +577,11 @@ footer > p {
         transform: none; /* Disabling rotation on hover */
         box-shadow: none;
     }
+
+    .wall-coverings.carousel-view .grid-item.selected {
+        box-shadow: 0 0 0 10px rgb(187, 191, 202), -8px 8px 16px rgba(0, 0, 0, 0.5);
+        outline: none;
+    }    
     
     .wall-coverings.carousel-view .grid-item span {
         font-size: 12px;
