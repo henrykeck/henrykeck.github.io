@@ -224,7 +224,7 @@ main {
     padding: 15px 0;
 }
 
-.wall-coverings {
+.wall-coverings.grid-view {
     max-width: 1260px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 200px));
@@ -232,6 +232,10 @@ main {
     padding: 15px 15px;
     overflow-x: hidden;
     margin: 0 auto;
+}
+
+.wall-coverings.carousel-view {
+    display: none; /* Hide carousel view by default on larger screens */
 }
 
 .wall-covering-description {
@@ -242,7 +246,6 @@ main {
 
 .grid-item {
     width: 200px;
-    width: 200px;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -250,36 +253,32 @@ main {
     box-shadow: -8px 8 16px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     transition: transform 250ms, box-shadow 250ms;
-
-    /* Ensuring square shape */
-    aspect-ratio: 1 / 1;  /* This property is supported in modern browsers to enforce aspect ratios */
+    aspect-ratio: 1 / 1;  
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(244, 244, 242);  /* Setting text color to white for better visibility */
+    color: rgb(244, 244, 242);
 
-    /* Hover effect */
     &:hover {
-        transform: rotate(3deg) scale(1.05);  /* Rotate and slightly scale up */
-        z-index: 1;  /* Ensure hovered item is above others */
-        box-shadow: -8px 8px 16px rgba(0, 0, 0, 0.5);  /* Enhanced shadow for depth */
+        transform: rotate(3deg) scale(1.05);
+        z-index: 1;
+        box-shadow: -8px 8px 16px rgba(0, 0, 0, 0.5);
     }
 
-    /* Selected effect */
     &.selected {
         border: 10px solid rgb(187, 191, 202);
         width: calc(200px - 20px);
-        outline: 10px solid transparent; /* This ensures the total size remains the same */
+        outline: 10px solid transparent;
     }
 }
 
-/* Styling for the text bubble effect */
 .grid-item span {
-    padding: 5px 10px;  /* Padding around the text */
-    background-color: rgb(244, 244, 242);  /* Semi-transparent white background */
-    border-radius: 8px;  /* Rounded corners for the bubble effect */
+    padding: 5px 10px;
+    background-color: rgb(244, 244, 242);
+    border-radius: 8px;
     color: black;
 }
+
 .grid-item:nth-child(1) {
     background-image: url('artifacts/residential_square.jpg');
 }
@@ -482,7 +481,7 @@ footer > p {
 /* ... existing CSS ... */
 
 /* Responsive styles for screens less than or equal to 768 pixels */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
     /* Navigation */
     nav ul {
@@ -541,8 +540,26 @@ footer > p {
         gap: 20px;
     }
 
-    .wall-coverings {
-        grid-template-columns: repeat(2, minmax(0, 150px));
+    .wall-coverings.grid-view {
+        display: none; /* Hide the grid view on mobile */
+    }
+      
+    .wall-coverings.carousel-view {
+        display: flex; /* Display the carousel view on mobile */
+        overflow-x: auto;
+        gap: 10px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .grid-item {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+
+        /* Adjust hover effect on mobile */
+        &:hover {
+            transform: none;
+            box-shadow: -8px 8 16px rgba(0, 0, 0, 0.5);
+        }
     }
 
     /* About Page's CSS */
