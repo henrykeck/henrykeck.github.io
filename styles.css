@@ -545,21 +545,29 @@ footer > p {
     }
       
     .wall-coverings.carousel-view {
-        display: flex; /* Display the carousel view on mobile */
-        overflow-x: auto;
+        display: flex;
+        flex-direction: row; /* ensure it's horizontal */
+        flex-wrap: nowrap;   /* prevent items from wrapping to next line */
+        overflow-x: auto;    /* allow horizontal scrolling */
         gap: 10px;
         scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* smooth scrolling in iOS */
     }
 
     .grid-item {
-        flex: 0 0 auto;
-        scroll-snap-align: start;
+        flex: 0 0 auto; /* do not grow, do not shrink, auto basis */
+        width: 200px; /* or whatever fixed width you desire */
+        /* ... other styles ... */
+    }
 
-        /* Adjust hover effect on mobile */
-        &:hover {
-            transform: none;
-            box-shadow: -8px 8 16px rgba(0, 0, 0, 0.5);
-        }
+    /* Optional: Style for the scrollbar (this is for Webkit browsers like Chrome and Safari) */
+    .wall-coverings.carousel-view::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .wall-coverings.carousel-view::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 2.5px;
     }
 
     /* About Page's CSS */
