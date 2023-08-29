@@ -111,8 +111,8 @@ main {
 .overlay-text a {
     color: rgb(73, 84, 100);
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
     text-decoration: none;
+    font-size: 18px;
 }
 
 .content-container {
@@ -194,6 +194,25 @@ main {
     max-width: 60%;
     height: auto;
     border-radius: 10px;
+}
+
+.info-section button {
+    padding: 10px 15px;
+    background-color: rgb(73, 84, 100);
+    color: rgb(244, 244, 242);
+    border: none;
+    border-radius: 5px;
+    cursor: auto;
+    width: auto; /* This ensures that the button does not stretch */
+    display: block; /* This will make sure the button only takes up the space it needs */
+    margin: 10px auto;
+}
+
+.info-section a {
+    color: rgb(244, 244, 242);
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .wall-coverings-wrapper {
