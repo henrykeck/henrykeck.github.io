@@ -535,14 +535,22 @@ footer > p {
     p {
         max-width: 600px; /* Adjust as needed depending on the font and size */
         font-family: 'Candara', sans-serif; /* Use a common font */
-        font-size: 14px; /* Adjust size accordingly */
+        font-size: 16px; /* Adjust size accordingly */
     }  
 
     .overlay-text {
         width: 80%;  /* 80% of the parent width */
         left: 50%;
-        transform: translateX(-50%);  /* Centering it horizontally */
+        transform: translate(-50%, -50%);
     }
+
+    .inspirational {
+        height: 300px;
+    }
+
+    .inspirational img {
+        object-position: center bottom;
+    }    
 
     /* Adjust logo sizes */
     #company-logo {
