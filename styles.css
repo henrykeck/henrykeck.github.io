@@ -44,9 +44,21 @@ nav li a {
     transition: color 0.3s;
 }
 
-/* nav li a:hover {
-    color: gray;
-} */
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;  /* adjust this value based on your needs */
+}
+
+.icon-wrapper svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.nav-text {
+    display: inline;  /* Hide by default for mobile-first */
+}
 
 /* Main Content */
 main {
@@ -483,16 +495,19 @@ footer > p {
 /* Responsive styles for screens less than or equal to 768 pixels */
 @media only screen and (max-width: 768px) {
 
-    /* Navigation */
+    /* Header */
+    header {
+        flex-direction: column;
+        padding: 5px 10px;
+    }
+
     nav ul {
         flex-direction: column;
         align-items: center;
     }
 
-    /* Header */
-    header {
-        flex-direction: column;
-        padding: 5px 10px;
+    .nav-text {
+        display: none;  /* Hide text on smaller screens */
     }
 
     /* Main Content */
