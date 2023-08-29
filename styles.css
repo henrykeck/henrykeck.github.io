@@ -40,7 +40,7 @@ nav ul {
 nav li a {
     text-decoration: none;
     color: rgb(73, 84, 100);
-    font-size: 22px;
+    font-size: 18px;
     transition: color 0.3s;
 }
 
@@ -57,7 +57,7 @@ main {
 }
 
 #company-logo {
-    width: 400px;
+    width: 350px;
     height: auto;
 }
 
