@@ -563,11 +563,16 @@ footer > p {
     }
 
     .grid-item {
-        flex: 0 0 auto; /* do not grow, do not shrink, auto basis */
-        width: 180px; /* or whatever fixed width you desire */
-        /* ... other styles ... */
+        width: 180px;
+        margin: 15px;
+
+        font-size: 5em;
+        text-align: center;
+        line-height: 300px;
+        background-color: #FFF9EF;
+        border-radius: 7px;
     }
-    
+
 
     /* About Page's CSS */
     .about {
