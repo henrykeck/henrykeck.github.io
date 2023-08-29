@@ -87,13 +87,29 @@ main {
     transform: translate(-50%, -50%);
     text-align: center;
     color: rgb(244, 244, 242);
-    background-color: rgb(73, 84, 100);
+    background-color: rgba(73, 84, 100, 0.8);
     padding: 20px 20px;
     border-radius: 10px;
 }
 
 .overlay-text p {
     margin: 0;
+}
+
+.overlay-text button {
+    padding: 10px 15px;
+    background-color: rgb(244, 244, 242);
+    color: rgb(73, 84, 100);
+    border: none;
+    border-radius: 5px;
+    cursor: auto;
+    width: auto; /* This ensures that the button does not stretch */
+    display: block; /* This will make sure the button only takes up the space it needs */
+    margin: 10px auto;
+}
+
+.overlay-text a {
+    color: rgb(73, 84, 100);
 }
 
 .content-container {
@@ -435,6 +451,7 @@ footer {
 }
 
 .footer-contact-info p {
+    text-align: center;
     margin-bottom: 3px;
 }
 
