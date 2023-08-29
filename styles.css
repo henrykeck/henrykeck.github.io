@@ -525,26 +525,6 @@ footer > p {
         width: 20px;
         height: 20px;
         margin-bottom: 10px;
-        
-        /* Drop shadow to simulate elevation */
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
-                    0px 1px 3px rgba(0, 0, 0, 0.1);
-
-        /* Slight tilt for 3D effect */
-        transform: rotateX(10deg) rotateY(10deg);
-
-        /* Transition for smooth hover effect */
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    /* Enhancing the effect when the icon is hovered or tapped on */
-    .icon-wrapper:hover svg {
-        /* Increase elevation upon hover */
-        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1),
-                    0px 3px 6px rgba(0, 0, 0, 0.1);
-
-        /* Slight tilt in a different direction upon hover */
-        transform: rotateX(-3deg) rotateY(-3deg);
     }
 
     /* Main Content */
@@ -565,7 +545,7 @@ footer > p {
     }
 
     .inspirational {
-        height: 400px;
+        height: 350px;
     }
 
     .inspirational img {
