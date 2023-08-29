@@ -4,14 +4,12 @@ body, h1, h2 {
     padding: 0;
     font-family: 'Candara', sans-serif;
     color: rgb(73, 84, 100);
-    background-color: rgb(244, 244, 242);
 }
 
 p {
     max-width: 500px; /* Adjust as needed depending on the font and size */
     font-family: 'Candara', sans-serif; /* Use a common font */
     font-size: 18px; /* Adjust size accordingly */
-    background-color: rgb(244, 244, 242);
 }  
 
 /* Header */
