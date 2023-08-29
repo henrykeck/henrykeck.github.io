@@ -578,10 +578,19 @@ footer > p {
         box-shadow: none;
     }
 
-    .wall-coverings.carousel-view .grid-item.selected {
-        box-shadow: 0 0 0 10px rgb(187, 191, 202), -8px 8px 16px rgba(0, 0, 0, 0.5);
-        outline: none;
-    }    
+    .wall-coverings.carousel-view .grid-item.selected::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 10px solid rgb(187, 191, 202);
+        box-sizing: border-box;
+        pointer-events: none; /* Ensure it doesn't interfere with any interactions */
+        z-index: 2; /* Ensure it overlays other elements */
+    }  
     
     .wall-coverings.carousel-view .grid-item span {
         font-size: 12px;
