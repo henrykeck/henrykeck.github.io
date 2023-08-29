@@ -553,8 +553,6 @@ footer > p {
         margin: 0 auto 0 auto;
         width: 90vw;
         height: fit-content;
-        
-        border: solid #F3E6FF .5px;
     }
 
     .wall-coverings.carousel-view::-webkit-scrollbar {
@@ -563,14 +561,10 @@ footer > p {
     }
 
     .grid-item {
-        width: 180px;
-        margin: 15px;
-
-        font-size: 5em;
-        text-align: center;
-        line-height: 300px;
-        background-color: #FFF9EF;
-        border-radius: 7px;
+        width: 120;
+        box-shadow: -8px 8 16px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        color: rgb(244, 244, 242);
     }
 
 
