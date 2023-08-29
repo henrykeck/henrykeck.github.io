@@ -561,8 +561,8 @@ footer > p {
     }
 
     .wall-coverings.carousel-view .grid-item {
-        width: 300px;
-        height: 300px; /* Same as width to ensure a square */
+        width: 180px;
+        height: 180px; /* Same as width to ensure a square */
         aspect-ratio: 1/1;
         position: relative;
         box-shadow: -8px 8 16px rgba(0, 0, 0, 0.5);
@@ -570,6 +570,7 @@ footer > p {
         display: flex;
         color: rgb(244, 244, 242);
         margin-right: 10px; /* Add space between squares */
+        transition: none;
     }
     
     .wall-coverings.carousel-view .grid-item:last-child {
