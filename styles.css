@@ -100,7 +100,7 @@ main {
     text-align: center;
     color: rgb(244, 244, 242);
     background-color: rgba(73, 84, 100, 0.8);
-    padding: 20px 20px;
+    padding: 10px 10px;
     border-radius: 10px;
 }
 
@@ -529,6 +529,12 @@ footer > p {
     main {
         margin-top: 90px; /* Adjust space for modified header */
     }
+
+    p {
+        max-width: 600px; /* Adjust as needed depending on the font and size */
+        font-family: 'Candara', sans-serif; /* Use a common font */
+        font-size: 14px; /* Adjust size accordingly */
+    }  
 
     /* Adjust logo sizes */
     #company-logo {
