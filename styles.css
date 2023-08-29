@@ -552,11 +552,12 @@ footer > p {
         gap: 10px;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch; /* smooth scrolling in iOS */
+        touch-action: pan-x;
     }
 
     .grid-item {
         flex: 0 0 auto; /* do not grow, do not shrink, auto basis */
-        width: 200px; /* or whatever fixed width you desire */
+        width: 180px; /* or whatever fixed width you desire */
         /* ... other styles ... */
     }
 
