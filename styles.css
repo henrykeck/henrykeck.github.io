@@ -327,10 +327,6 @@ main {
     background-image: url('artifacts/foil_square.jpg');
 }
 
-/* .grid-item:hover {
-    background-color: #f0f0f0;
-} */
-
 /*
 ABOUT PAGE'S CSS
 */
@@ -490,8 +486,6 @@ footer > p {
     margin-top: 5px; 
 }
 
-/* ... existing CSS ... */
-
 /* Responsive styles for screens less than or equal to 768 pixels */
 @media only screen and (max-width: 768px) {
 
@@ -527,6 +521,7 @@ footer > p {
     .icon-wrapper svg {
         width: 20px;
         height: 20px;
+        margin-bottom: 10px;
     }
 
     /* Main Content */
@@ -586,7 +581,6 @@ footer > p {
         gap: 10px;
         margin: 0 auto 0 auto;
         width: 90vw;
-        /* height: fit-content; */
     }
 
     .wall-coverings.carousel-view::-webkit-scrollbar {
@@ -613,30 +607,9 @@ footer > p {
     }
 
     .wall-coverings.carousel-view .grid-item.selected {
-        /* outline: 10px solid rgb(187, 191, 202);
-        outline-offset: -10px; */
-
         border: 10px solid rgb(187, 191, 202);
-        /* height: 100%; */
         box-sizing: border-box;
-        /* padding: 1rem; */
-        /* text-align: center; */
-        /* color: green; */
     }    
-
-    /* .wall-coverings.carousel-view .grid-item.selected::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border: 10px solid rgb(187, 191, 202);
-        box-sizing: border-box;
-        pointer-events: none; /* Ensure it doesn't interfere with any interactions */
-        /* z-index: 2; */
-    /* }   */
     
     .wall-coverings.carousel-view .grid-item span {
         font-size: 12px;
