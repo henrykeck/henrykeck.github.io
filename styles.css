@@ -549,10 +549,10 @@ footer > p {
         overflow-x: auto;
         -ms-overflow-style: none; /* Hide the scrollbar for MS Edge */
         scrollbar-width: none; /* Hide the scrollbar for Mozilla Firefox */
-
+        gap: 10px;
         margin: 0 auto 0 auto;
         width: 90vw;
-        height: fit-content;
+        /* height: fit-content; */
     }
 
     .wall-coverings.carousel-view::-webkit-scrollbar {
@@ -562,11 +562,12 @@ footer > p {
 
     .wall-coverings.carousel-view .grid-item {
         width: 300px;
-        padding-top: 300px; /* Same as width to ensure a square */
+        height: 300px; /* Same as width to ensure a square */
         aspect-ratio: 1/1;
         position: relative;
         box-shadow: -8px 8 16px rgba(0, 0, 0, 0.5);
         border-radius: 10px;
+        display: flex;
         color: rgb(244, 244, 242);
         margin-right: 10px; /* Add space between squares */
     }
