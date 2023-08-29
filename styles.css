@@ -497,13 +497,24 @@ footer > p {
 
     /* Header */
     header {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 5px 10px;
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    #company-logo-slim {
+        width: 220px;
+        margin-bottom: 10px;
     }
 
     .nav-text {
@@ -516,8 +527,8 @@ footer > p {
     }
 
     /* Adjust logo sizes */
-    #company-logo, #company-logo-slim {
-        width: 200px;
+    #company-logo {
+        width: 180px;
     }
 
     /* Serving the Pacific Northwest section */
