@@ -128,7 +128,7 @@ main {
 }
 
 .content-container {
-    max-width: 100%; /* This can be adjusted according to your site design */
+    max-width: 80%; /* This can be adjusted according to your site design */
     margin: 0 auto; /* This centers the container */
     padding: 0 40px; /* 40px padding on the left and right */
 }
