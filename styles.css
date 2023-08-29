@@ -562,12 +562,13 @@ footer > p {
 
     .wall-coverings.carousel-view .grid-item {
         aspect-ratio: 1/1;
-        width: 180px;
+        width: 300px;
         box-shadow: -8px 8 16px rgba(0, 0, 0, 0.5);
         border-radius: 10px;
         color: rgb(244, 244, 242);
         align-items: center;
         justify-content: center;
+        padding: 10px;
     }
 
     .wall-coverings.carousel-view .grid-item span {
