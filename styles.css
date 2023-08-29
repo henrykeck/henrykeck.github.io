@@ -582,7 +582,7 @@ footer > p {
         box-shadow: inset 0 0 0 10px rgb(187, 191, 202), -8px 8px 16px rgba(0, 0, 0, 0.5);
     }
 
-    .wall-coverings.carousel-view .grid-item.selected::before {
+    /* .wall-coverings.carousel-view .grid-item.selected::before {
         content: "";
         display: block;
         position: absolute;
@@ -593,8 +593,8 @@ footer > p {
         border: 10px solid rgb(187, 191, 202);
         box-sizing: border-box;
         pointer-events: none; /* Ensure it doesn't interfere with any interactions */
-        z-index: 2; /* Ensure it overlays other elements */
-    }  
+        /* z-index: 2; */
+    /* }   */
     
     .wall-coverings.carousel-view .grid-item span {
         font-size: 12px;
