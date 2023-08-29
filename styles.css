@@ -572,9 +572,14 @@ footer > p {
         margin-right: 10px; /* Add space between squares */
         transition: none;
     }
+
+    .wall-coverings.carousel-view .grid-item:hover {
+        transform: none; /* Disabling rotation on hover */
+        box-shadow: none;
+    }
     
     .wall-coverings.carousel-view .grid-item:last-child {
-        margin-right: 0; /* Ensure the last item doesn't have a right margin */
+        margin-right: 10px; /* Ensure the last item doesn't have a right margin */
     }
     
     .wall-coverings.carousel-view .grid-item span {
