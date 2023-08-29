@@ -578,10 +578,6 @@ footer > p {
         box-shadow: none;
     }
     
-    .wall-coverings.carousel-view .grid-item:last-child {
-        margin-right: 10px; /* Ensure the last item doesn't have a right margin */
-    }
-    
     .wall-coverings.carousel-view .grid-item span {
         font-size: 12px;
         position: absolute; /* Position absolutely inside the grid-item */
