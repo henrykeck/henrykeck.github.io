@@ -81,7 +81,8 @@ main {
 
 .inspirational {
     position: relative;
-    width: 100%;
+    max-width: 100%;
+    width: auto;
     height: 500px;
     overflow: hidden;
 }
@@ -535,6 +536,12 @@ footer > p {
         font-family: 'Candara', sans-serif; /* Use a common font */
         font-size: 14px; /* Adjust size accordingly */
     }  
+
+    .overlay-text {
+        width: 80%;  /* 80% of the parent width */
+        left: 50%;
+        transform: translateX(-50%);  /* Centering it horizontally */
+    }
 
     /* Adjust logo sizes */
     #company-logo {
