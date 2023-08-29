@@ -524,6 +524,11 @@ footer > p {
         display: none;  /* Hide text on smaller screens */
     }
 
+    .icon-wrapper svg {
+        width: 20px;
+        height: 20px;
+    }
+
     /* Main Content */
     main {
         margin-top: 90px; /* Adjust space for modified header */
