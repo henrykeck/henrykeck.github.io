@@ -6,6 +6,10 @@ body, h1, h2 {
     color: rgb(73, 84, 100);
 }
 
+body {
+    background-color: rgb(244, 244, 242);
+}
+
 p {
     max-width: 500px; /* Adjust as needed depending on the font and size */
     font-family: 'Candara', sans-serif; /* Use a common font */
@@ -417,6 +421,7 @@ footer, footer *, footer *::before, footer *::after {
 footer {
     padding: 10px;
     background-color: rgb(232, 232, 232);
+    border-top: 2px solid rgb(73, 84, 100);
     display: flex;
     flex-direction: column;
     align-items: center;
