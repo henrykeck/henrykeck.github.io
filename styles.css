@@ -110,9 +110,9 @@ main {
 
 .overlay-text a {
     color: rgb(73, 84, 100);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .content-container {
@@ -210,9 +210,9 @@ main {
 
 .info-section a {
     color: rgb(244, 244, 242);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .wall-coverings-wrapper {
@@ -256,7 +256,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;  /* Setting text color to white for better visibility */
+    color: rgb(244, 244, 242);  /* Setting text color to white for better visibility */
 
     /* Hover effect */
     &:hover {
@@ -276,7 +276,7 @@ main {
 /* Styling for the text bubble effect */
 .grid-item span {
     padding: 5px 10px;  /* Padding around the text */
-    background-color: rgba(255, 255, 255, 0.7);  /* Semi-transparent white background */
+    background-color: rgb(244, 244, 242);  /* Semi-transparent white background */
     border-radius: 8px;  /* Rounded corners for the bubble effect */
     color: black;
 }
