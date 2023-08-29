@@ -539,13 +539,14 @@ footer > p {
     }  
 
     .overlay-text {
-        width: 80%;  /* 80% of the parent width */
+        width: 70%;  /* 80% of the parent width */
+        height: 80%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
     .inspirational {
-        height: 300px;
+        height: 400px;
     }
 
     .inspirational img {
