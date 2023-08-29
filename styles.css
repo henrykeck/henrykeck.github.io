@@ -506,10 +506,13 @@ footer > p {
         align-items: center;
         justify-content: center;
         gap: 20px;
+        margin: 0;
+        padding: 0;
     }
 
     nav li {
         margin: 0;
+        text-align: center;
     }
 
     #company-logo-slim {
