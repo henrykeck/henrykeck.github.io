@@ -502,6 +502,7 @@ footer > p {
         gap: 20px;
         margin: 0;
         padding: 0;
+        margin-bottom: 10px;
     }
 
     nav li {
