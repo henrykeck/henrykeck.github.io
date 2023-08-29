@@ -110,6 +110,8 @@ main {
 
 .overlay-text a {
     color: rgb(73, 84, 100);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 .content-container {
