@@ -561,18 +561,25 @@ footer > p {
     }
 
     .wall-coverings.carousel-view .grid-item {
-        aspect-ratio: 1/1;
         width: 300px;
+        padding-top: 300px; /* Same as width to ensure a square */
+        position: relative;
         box-shadow: -8px 8 16px rgba(0, 0, 0, 0.5);
         border-radius: 10px;
         color: rgb(244, 244, 242);
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
+        margin-right: 10px; /* Add space between squares */
     }
-
+    
+    .wall-coverings.carousel-view .grid-item:last-child {
+        margin-right: 0; /* Ensure the last item doesn't have a right margin */
+    }
+    
     .wall-coverings.carousel-view .grid-item span {
         font-size: 12px;
+        position: absolute; /* Position absolutely inside the grid-item */
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the span */
         padding: 5px 10px;
         background-color: rgb(244, 244, 242);
         border-radius: 8px;
