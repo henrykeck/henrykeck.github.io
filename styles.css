@@ -546,13 +546,20 @@ footer > p {
       
     .wall-coverings.carousel-view {
         display: flex;
-        flex-direction: row; /* ensure it's horizontal */
-        flex-wrap: nowrap;   /* prevent items from wrapping to next line */
-        overflow-x: auto;    /* allow horizontal scrolling */
-        gap: 10px;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch; /* smooth scrolling in iOS */
-        touch-action: pan-x;
+        overflow-x: auto;
+        -ms-overflow-style: none; /* Hide the scrollbar for MS Edge */
+        scrollbar-width: none; /* Hide the scrollbar for Mozilla Firefox */
+
+        margin: 0 auto 0 auto;
+        width: 90vw;
+        height: fit-content;
+        
+        border: solid #F3E6FF .5px;
+    }
+
+    .wall-coverings.carousel-view::-webkit-scrollbar {
+        display: none; /* Hide the scrollbar on Webkit based browsers (Chrome, Safari, etc) */
+        -webkit-overflow-scrolling: touch; /* On touch screens the content continues to scroll for a while after finishing the scroll gesture */
     }
 
     .grid-item {
@@ -560,16 +567,7 @@ footer > p {
         width: 180px; /* or whatever fixed width you desire */
         /* ... other styles ... */
     }
-
-    /* Optional: Style for the scrollbar (this is for Webkit browsers like Chrome and Safari) */
-    .wall-coverings.carousel-view::-webkit-scrollbar {
-        height: 5px;
-    }
-
-    .wall-coverings.carousel-view::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 2.5px;
-    }
+    
 
     /* About Page's CSS */
     .about {
