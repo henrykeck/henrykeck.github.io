@@ -63,7 +63,7 @@ nav li a {
 #home-page a[href="/"] .icon-wrapper,
 #about-page a[href="/about/"] .icon-wrapper,
 #gallery-page a[href="/gallery/"] .icon-wrapper {
-    border: 2px solid rgb(187, 191, 202);
+    border: 2px solid rgb(73, 84, 100);
 }
 
 .nav-text {
