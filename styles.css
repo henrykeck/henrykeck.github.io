@@ -14,7 +14,7 @@ p {
     max-width: 500px; /* Adjust as needed depending on the font and size */
     font-family: 'Candara', sans-serif; /* Use a common font */
     font-size: 18px; /* Adjust size accordingly */
-}  
+}
 
 /* Header */
 header {
@@ -54,6 +54,14 @@ nav li a {
     width: 16px;
     height: 16px;
     margin-right: 5px;
+}
+
+#home-page a[href="/"] .icon-wrapper,
+#about-page a[href="/about/"] .icon-wrapper,
+#gallery-page a[href="/gallery/"] .icon-wrapper {
+    border: 2px solid rgb(187, 191, 202);
+    padding: 5px; 
+    border-radius: 5px;
 }
 
 .nav-text {
