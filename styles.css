@@ -163,6 +163,7 @@ main {
     background-repeat: no-repeat;
     border-radius: 10px;
     z-index: 1; 
+    align-items: center;
 }
 
 #dave-portrait {
