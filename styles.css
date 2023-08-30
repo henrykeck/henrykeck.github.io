@@ -193,11 +193,11 @@ main {
     padding: 20px;
 }
 
-@media only screen and (min-width: 933px) {
+/* @media only screen and (min-width: 933px) {
     #dave-portrait {
         width: 33%;
     }
-}
+} */
 
 
 /* .serving-content {
