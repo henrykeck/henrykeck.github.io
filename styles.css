@@ -575,12 +575,14 @@ footer > p {
         font-size: 14px;
     }
 
-    .inspirational {
+    /* .inspirational {
         height: 400px;
-    }
+    } */
 
     .inspirational img {
         object-position: center bottom;
+        margin: 0;
+        padding: 5px;
     }    
 
     /* Hide serving section on mobile */
