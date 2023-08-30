@@ -145,71 +145,75 @@ main {
 }
 
 .content-container {
-    max-width: 80%; /* This can be adjusted according to your site design */
-    margin: 0 auto; /* This centers the container */
-    padding: 0 40px; /* 40px padding on the left and right */
+    max-width: 80%; 
+    margin: 0 auto; 
+    padding: 0 40px; 
 }
 
-/* Serving the Pacific Northwest section */
 .serving {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     position: relative;
     width: 100%; 
-    padding: 40px 0; /* Only padding top and bottom */
-    max-height: 600px;
-    overflow: hidden;
-    margin-top: 40px;
-    background-color: transparent;
-    border-radius: 10px;
-}
-
-.serving::before {
-    content: "";
-    /* ... other properties ... */
-    background-image: url('artifacts/content-photos/filler/marble_wallpaper.jpg'); /* Default to the largest resolution */
+    padding: 40px 0; 
+    background-image: url('artifacts/content-photos/filler/marble_wallpaper.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;
     border-radius: 10px;
+    z-index: 1; 
 }
 
-
-/* Mobile-first approach, assuming the mobile styles by default */
 #dave-portrait {
+    grid-column: 1/2;
     max-width: 100%;
-    height: auto; 
-    width: 80%; /* 80% width on mobile */
+    height: auto;
+    width: 80%; 
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    margin: 0 auto 20px auto;
+    margin: 0 auto;
 }
-
-/* Media query for desktop screens */
-@media only screen and (min-width: 933px) {
-    #dave-portrait {
-        width: 30%; /* 30% width on desktop */
-    }
-}
-
 
 .serving-content {
-    width: 90%;
+    grid-column: 2/3;
+    align-self: center;
+    width: 100%;
     padding: 20px;
     border-radius: 10px;
     color: rgb(73, 84, 100);
-    margin-bottom: 20px; /* 20px bottom margin for padding effect */
+    margin-bottom: 20px;
     box-sizing: border-box;
-    overflow: auto;
 }
 
 .text-background {
     background-color: rgba(244, 244, 242, 0.8);
     border-radius: 10px;
-    padding: 20px; /* To give some space around text */
+    padding: 20px;
 }
+
+@media only screen and (min-width: 933px) {
+    #dave-portrait {
+        width: 40%;
+    }
+}
+
+
+/* .serving-content {
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(73, 84, 100);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+} */
+
+/* .text-background {
+    background-color: rgba(244, 244, 242, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+} */
 
 .info-section {
     display: flex;
