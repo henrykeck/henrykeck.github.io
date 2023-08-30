@@ -178,8 +178,9 @@ main {
 
 
 .dave-portrait {
+    max-width: 100%;
+    height: auto; 
     width: 60%;
-    height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     margin: 0 auto 20px auto; /* 20px bottom margin for padding effect */
@@ -722,8 +723,10 @@ footer > p {
     }
 
     .dave-portrait {
-        margin-right: 0;
+        max-width: 100%;
+        height: auto;
         width: 100%;
+        margin-right: 0;
     }
 
     .about-content {
