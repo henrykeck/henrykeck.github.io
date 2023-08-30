@@ -653,13 +653,13 @@ footer > p {
         right: 10px; 
         top: 50%; 
         transform: translateY(-50%); 
-        width: 30px; 
-        height: 30px; 
-        opacity: 0.6; 
+        width: 40px; 
+        height: 40px; 
+        opacity: 0.8; 
         pointer-events: none; 
         z-index: 10; 
         background-color: rgba(244, 244, 242, 0.8); /* Background for the arrow container */
-        border-radius: 15px; /* This will make the background circle around the arrow */
+        border-radius: 20px; /* This will make the background circle around the arrow */
     }
 
     .carousel-arrow svg {
@@ -669,11 +669,12 @@ footer > p {
     }
 
     /* Fade out the arrow as user hovers or touches the carousel */
-    .wall-coverings.carousel-view:hover .carousel-arrow,
-    .wall-coverings.carousel-view:focus-within .carousel-arrow {
+    .wall-coverings.carousel-view:focus-within .carousel-arrow, 
+    .carousel-arrow:hover {
         opacity: 0;
         transition: opacity 0.3s;
     }
+
 
 
     /* About Page's CSS */
