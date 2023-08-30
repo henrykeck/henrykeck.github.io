@@ -60,7 +60,6 @@ nav li a {
 #about-page a[href="/about/"] .icon-wrapper,
 #gallery-page a[href="/gallery/"] .icon-wrapper {
     border: 2px solid rgb(187, 191, 202);
-    padding: 5px; 
     border-radius: 5px;
 }
 
