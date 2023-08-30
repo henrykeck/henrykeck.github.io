@@ -54,9 +54,21 @@ function getDescription(type, targetDiv) {
         .then(response => response.ok ? response.text() : Promise.reject('Network response was not ok'))
         .then(text => {
             const lines = text.split('\n').filter(line => line.trim() !== '');
-            const formattedText = lines.map((line, index) => 
-                index === 0 ? `<h2>${line}</h2>` : `<p>${line}</p>`
-            ).join('');
+            let formattedText;
+
+            // Check if it's the carousel view by the display property of the element
+            const carouselElement = document.querySelector('.wall-coverings.carousel-view');
+            if (carouselElement && getComputedStyle(carouselElement).display !== 'none') {
+                // Carousel view: Display only the first h2 and the first p
+                formattedText = `<h2>${lines[0]}</h2>`; // Assuming the first line is always h2
+                if (lines[1]) formattedText += `<p>${lines[1]}</p>`; // Append the first p if it exists
+            } else {
+                // Not carousel view: Display everything
+                formattedText = lines.map((line, index) => 
+                    index === 0 ? `<h2>${line}</h2>` : `<p>${line}</p>`
+                ).join('');
+            }
+
             targetDiv.innerHTML = formattedText;
         })
         .catch(error => {
