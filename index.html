@@ -66,7 +66,7 @@
                     </li>
                 </ul>
             </nav>
-            <img src="artifacts/logos/logo-slim.png" alt="Keck Paperhanging small logo" id="company-logo-slim" />
+            <img src="artifacts/logos/logo-slim.png" alt="Keck Paperhanging small logo" id="company-logo-slim">
         </header>
 
         <!-- Main content -->
@@ -92,7 +92,13 @@
                 <!-- Serving the Pacific Northwest -->
                 <section class="serving">
                     <div></div>
-                    <img src="artifacts/dave_headshot.jpeg" alt="Dave Keck, Founder of Keck Paperhanging" class="dave-portrait">
+                    <img 
+                        srcset="
+                            artifacts/content-photos/personnel/dave_fun-desktop.jpeg 1440w, 
+                            artifacts/content-photos/personnel/dave_fun-mobile.jpeg 932w,"
+                        sizes="(max-width: 932px) 932px, 1440px, 1920px" 
+                        src="artifacts/content-photos/personnel/dave_fun.jpeg" 
+                        alt="Dave having fun">
                     <div class="serving-content">
                         <div class="text-background">
                             <h2>A Legacy in the Pacific Northwest</h2>
@@ -110,7 +116,11 @@
                         <p>Your chosen wallpaper deserves the perfect application. With our expert installation, we ensure each design shines, resonates, and elevates every room. Seamless finishes, precise edges, and pure elegance—experience it all with our service. Let's collaborate and make your vision come alive on your walls.</p>
                         <button><a href="#">GALLERY</a></button>
                     </div>
-                    <img src="artifacts/white_octagon_wallpaper_2.jpg" alt="Modern Living Room with White Octagon Residential Paper">
+                    <img 
+                        srcset="artifacts/content-photos/filler/white_octagon_wallpaper-desktop.jpg 1440w, artifacts/content-photos/filler/white_octagon_wallpaper-mobile.jpg 932w" 
+                        sizes="(max-width: 932px) 932px, 1440px" 
+                        src="artifacts/content-photos/filler/white_octagon_wallpaper.jpg" 
+                        alt="White octagon wallpaper">
                 </section>
 
                 <section class="wall-coverings-wrapper">
