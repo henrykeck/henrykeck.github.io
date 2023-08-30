@@ -81,12 +81,14 @@ main {
 #company-logo {
     width: 350px;
     height: auto;
+    filter: invert(32%) sepia(20%) saturate(454%) hue-rotate(176deg) brightness(93%) contrast(92%);
 }
 
 #company-logo-slim {
     width: 300px;
     height: auto;
     max-height: 120px;
+    filter: invert(32%) sepia(20%) saturate(454%) hue-rotate(176deg) brightness(93%) contrast(92%);
 }
 
 .inspirational {
