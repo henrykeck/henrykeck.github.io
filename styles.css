@@ -48,6 +48,7 @@ nav li a {
     display: flex;
     align-items: center;
     gap: 5px;  /* adjust this value based on your needs */
+    padding: 2px;
 }
 
 .icon-wrapper svg {
@@ -60,6 +61,7 @@ nav li a {
 #about-page a[href="/about/"] .icon-wrapper,
 #gallery-page a[href="/gallery/"] .icon-wrapper {
     border: 2px solid rgb(187, 191, 202);
+    padding: 2px; 
     border-radius: 5px;
 }
 
