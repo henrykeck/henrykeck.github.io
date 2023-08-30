@@ -88,7 +88,13 @@ for (let i = 0; i < carouselItems.length; i++) {
     dot.classList.add('dot');
     dot.addEventListener('click', function() {
         // Scroll the carousel to the clicked dot's corresponding item
-        carouselItems[i].scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
+        carouselItems[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+        // Remove 'selected' class from all items
+        carouselItems.forEach(item => item.classList.remove('selected'));
+
+        // Add 'selected' class to the clicked item
+        carouselItems[i].classList.add('selected');
     });
     indicatorsContainer.appendChild(dot);
 }

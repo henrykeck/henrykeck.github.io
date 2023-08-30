@@ -678,8 +678,10 @@ footer > p {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 10px; /* Spacing between the carousel and the indicators */
+        margin-top: 10px;
+        width: 100%; /* Ensure it spans the full width of the parent */
     }
+    
     
     .carousel-indicators .dot {
         width: 8px;
