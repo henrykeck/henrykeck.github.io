@@ -504,7 +504,7 @@ footer > p {
 
     /* Header */
     header {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 5px 10px;
     }
 
