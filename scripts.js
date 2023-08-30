@@ -80,14 +80,23 @@ function debounce(func, wait) {
 // DOM elements
 const carouselItems = document.querySelectorAll('.wall-coverings.carousel-view .grid-item');
 const indicatorsContainer = document.querySelector('.carousel-indicators');
+const carouselView = document.querySelector('.wall-coverings.carousel-view');
 
 // Handlers
 function handleDotClick(index) {
+    // Disable the scroll event listener temporarily
+    carouselView.removeEventListener('scroll', handleDebouncedScroll);
+
     carouselItems[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     carouselItems.forEach(item => item.classList.remove('selected'));
     carouselItems[index].classList.add('selected');
     updateActiveDot(index);
     updateDescriptionBasedOnType(index);
+
+    // Re-enable the scroll event listener after a delay
+    setTimeout(() => {
+        carouselView.addEventListener('scroll', handleDebouncedScroll);
+    }, 500);
 }
 
 function handleGridItemClick(index) {
@@ -140,13 +149,14 @@ carouselItems.forEach((item, index) => {
 
 for (let i = 0; i < carouselItems.length; i++) {
     const dot = document.createElement('div');
-    dot.classList.add('dot', i === 0 && 'active');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
     dot.addEventListener('click', () => handleDotClick(i));
     indicatorsContainer.appendChild(dot);
 }
 
-document.querySelector('.wall-coverings.carousel-view')
-    .addEventListener('scroll', debounce(handleScroll, 100));
+const handleDebouncedScroll = debounce(handleScroll, 100);
+carouselView.addEventListener('scroll', handleDebouncedScroll);
 
 // Initial setup
 updateDescriptionBasedOnType(0);
