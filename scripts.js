@@ -82,25 +82,32 @@ const carouselItems = document.querySelectorAll('.wall-coverings.carousel-view .
 const indicatorsContainer = document.querySelector('.carousel-indicators');
 const carouselView = document.querySelector('.wall-coverings.carousel-view');
 
+let isProgrammaticScroll = false; // New flag
+
 // Handlers
 let lastSelectedIndex = 0;
 
 function handleDotClick(index) {
-    // Disable the scroll event listener temporarily
-    carouselView.removeEventListener('scroll', handleDebouncedScroll);
-
+    isProgrammaticScroll = true;  // Set the flag
     centerAndHighlightItem(index);
-
-    // Re-enable the scroll event listener after a delay
+    
+    // After a delay, reset the flag
     setTimeout(() => {
-        carouselView.addEventListener('scroll', handleDebouncedScroll);
-    }, 500);
+        isProgrammaticScroll = false;
+    }, 500); 
 
     lastSelectedIndex = index;
 }
 
 function handleGridItemClick(index) {
+    isProgrammaticScroll = true;  // Set the flag
     centerAndHighlightItem(index);
+    
+    // After a delay, reset the flag
+    setTimeout(() => {
+        isProgrammaticScroll = false;
+    }, 500);
+
     lastSelectedIndex = index;
 }
 
@@ -113,11 +120,9 @@ function centerAndHighlightItem(index) {
     updateDescriptionBasedOnType(index);
 }
 
-let isProgrammaticScroll = false;
-
 function handleScroll() {
     if (isProgrammaticScroll) {
-        return;  // Do not handle this scroll event if it was caused programmatically
+        return;  // If the flag is true, we won't execute the rest of the function
     }
 
     let maxVisibleIndex = 0;
