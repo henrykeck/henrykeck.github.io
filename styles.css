@@ -591,7 +591,7 @@ footer > p {
     /* Wall coverings section */
     .wall-coverings-wrapper {
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
     }
 
     .wall-coverings.grid-view {
@@ -613,7 +613,7 @@ footer > p {
         scrollbar-width: none; /* Hide the scrollbar for Mozilla Firefox */
         gap: 10px;
         width: 100%;  /* Ensure it spans the full width of its container */
-        padding: 0 10px;
+        padding: 0 5px;
         padding-bottom: 10px;
     }
 
@@ -651,7 +651,7 @@ footer > p {
         position: absolute; /* Position absolutely inside the grid-item */
         top: 50%; 
         left: 50%;
-        transform: translate(-50%, -50%); /* Center the span */
+        transform: translate(-50%, -50%);
         padding: 5px 10px;
         background-color: rgb(244, 244, 242);
         border-radius: 8px;
@@ -663,7 +663,7 @@ footer > p {
         justify-content: center;
         align-items: center;
         margin-top: 10px;
-        width: 100%; /* Ensure it spans the full width of the parent */
+        width: 100%;
     }
     
     
