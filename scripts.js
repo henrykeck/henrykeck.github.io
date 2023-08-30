@@ -123,6 +123,7 @@ for (let i = 0; i < carouselItems.length; i++) {
         carouselItems[i].classList.add('selected');
         
         updateActiveDot(i);
+        updateDescriptionBasedOnType(i);
     });
 
     indicatorsContainer.appendChild(dot);
@@ -133,6 +134,7 @@ carouselItems.forEach((item, index) => {
     item.addEventListener('click', function(event) {
         event.stopPropagation();
         updateActiveDot(index);
+        updateDescriptionBasedOnType(index);
     });
 });
 
@@ -154,4 +156,21 @@ document.querySelector('.wall-coverings.carousel-view').addEventListener('scroll
     });
 
     updateActiveDot(maxVisibleIndex);
+    updateDescriptionBasedOnType(maxVisibleIndex);
 }, 100));
+
+function getTypeFromGridItem(index) {
+    const item = carouselItems[index];
+    const span = item.querySelector('span');
+    return span ? span.textContent : null;
+}
+
+function updateDescriptionBasedOnType(index) {
+    const type = getTypeFromGridItem(index);
+    if(type) {
+        const targetDiv = document.querySelector('.wall-covering-description');
+        getDescription(type, targetDiv);
+    }
+}
+
+updateDescriptionBasedOnType(0);
