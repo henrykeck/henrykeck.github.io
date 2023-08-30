@@ -598,6 +598,7 @@ footer > p {
     }
       
     .wall-coverings.carousel-view {
+        position: relative;
         display: flex;
         overflow-x: auto;
         -ms-overflow-style: none; /* Hide the scrollbar for MS Edge */
