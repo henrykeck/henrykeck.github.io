@@ -83,6 +83,8 @@ const indicatorsContainer = document.querySelector('.carousel-indicators');
 const carouselView = document.querySelector('.wall-coverings.carousel-view');
 
 // Handlers
+let lastSelectedIndex = 0;
+
 function handleDotClick(index) {
     // Disable the scroll event listener temporarily
     carouselView.removeEventListener('scroll', handleDebouncedScroll);
@@ -93,10 +95,13 @@ function handleDotClick(index) {
     setTimeout(() => {
         carouselView.addEventListener('scroll', handleDebouncedScroll);
     }, 500);
+
+    lastSelectedIndex = index;
 }
 
 function handleGridItemClick(index) {
     centerAndHighlightItem(index);
+    lastSelectedIndex = index;
 }
 
 // Utility to center and highlight the selected item
@@ -128,9 +133,13 @@ function handleScroll() {
         }
     });
 
-    updateActiveDot(maxVisibleIndex);
-    updateDescriptionBasedOnType(maxVisibleIndex);
+    if (maxVisibleIndex !== lastSelectedIndex) {
+        updateActiveDot(maxVisibleIndex);
+        updateDescriptionBasedOnType(maxVisibleIndex);
+        lastSelectedIndex = maxVisibleIndex;  // Update the last selected index
+    }
 }
+
 
 
 // Utilities for Carousel behaviors
