@@ -597,6 +597,13 @@ footer > p {
         display: none; /* Hide the grid view on mobile */
     }
       
+    .carousel-container {
+        width: 80%; /* Or any width you want */
+        margin: 0 auto; /* This will center the container */
+        overflow: hidden; /* This ensures any overflowing content (like your carousel) is hidden from view */
+        position: relative;
+    }
+    
     .wall-coverings.carousel-view {
         position: relative;
         display: flex;
@@ -604,18 +611,8 @@ footer > p {
         -ms-overflow-style: none; /* Hide the scrollbar for MS Edge */
         scrollbar-width: none; /* Hide the scrollbar for Mozilla Firefox */
         gap: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%; 
-        padding: 0 10vw;  /* Set padding to 10% viewport width on both sides */
-    }    
-
-    /* Add a pseudo-element to handle padding */
-    .wall-coverings.carousel-view::before,
-    .wall-coverings.carousel-view::after {
-        content: '';
-        width: 10px; /* Equivalent to the gap you want. Adjust if necessary. */
-        flex: none; /* This ensures the pseudo-element doesn't grow or shrink with other flex items. */
+        width: 100%;  /* Ensure it spans the full width of its container */
+        padding: 0 10px;
     }
 
     .wall-coverings.carousel-view::-webkit-scrollbar {
