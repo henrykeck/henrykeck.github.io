@@ -156,7 +156,7 @@ main {
     gap: 20px;
     position: relative;
     width: 100%; 
-    padding: 40px 0; 
+    padding: 40px 20px; 
     background-image: url('artifacts/content-photos/filler/marble_wallpaper-desktop.jpg'); 
     background-size: cover;
     background-position: center;
