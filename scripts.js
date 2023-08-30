@@ -87,11 +87,7 @@ function handleDotClick(index) {
     // Disable the scroll event listener temporarily
     carouselView.removeEventListener('scroll', handleDebouncedScroll);
 
-    carouselItems[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    carouselItems.forEach(item => item.classList.remove('selected'));
-    carouselItems[index].classList.add('selected');
-    updateActiveDot(index);
-    updateDescriptionBasedOnType(index);
+    centerAndHighlightItem(index);
 
     // Re-enable the scroll event listener after a delay
     setTimeout(() => {
@@ -100,6 +96,14 @@ function handleDotClick(index) {
 }
 
 function handleGridItemClick(index) {
+    centerAndHighlightItem(index);
+}
+
+// Utility to center and highlight the selected item
+function centerAndHighlightItem(index) {
+    carouselItems[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    carouselItems.forEach(item => item.classList.remove('selected'));
+    carouselItems[index].classList.add('selected');
     updateActiveDot(index);
     updateDescriptionBasedOnType(index);
 }
