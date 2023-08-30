@@ -77,3 +77,40 @@ function craftEmail() {
     // Open email client
     window.location.href = `mailto:dave@keckpaperhanging.com?subject=${subject}&body=${body}`;
 }
+
+// Get carousel items and indicators container
+var carouselItems = document.querySelectorAll('.wall-coverings.carousel-view .grid-item');
+var indicatorsContainer = document.querySelector('.carousel-indicators');
+
+// Generate dots
+for (let i = 0; i < carouselItems.length; i++) {
+    let dot = document.createElement('div');
+    dot.classList.add('dot');
+    dot.addEventListener('click', function() {
+        // Scroll the carousel to the clicked dot's corresponding item
+        carouselItems[i].scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
+    });
+    indicatorsContainer.appendChild(dot);
+}
+
+// Check which carousel item is in view and update dots
+document.querySelector('.wall-coverings.carousel-view').addEventListener('scroll', function() {
+    let maxVisibleIndex = 0;
+    let maxVisiblePercentage = 0;
+
+    carouselItems.forEach((item, index) => {
+        let rect = item.getBoundingClientRect();
+        let width = rect.width;
+        let visibleWidth = Math.min(window.innerWidth - rect.left, width);
+        let visiblePercentage = visibleWidth / width;
+
+        if (visiblePercentage > maxVisiblePercentage) {
+            maxVisiblePercentage = visiblePercentage;
+            maxVisibleIndex = index;
+        }
+    });
+
+    document.querySelectorAll('.carousel-indicators .dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === maxVisibleIndex);
+    });
+});

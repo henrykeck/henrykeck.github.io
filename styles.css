@@ -648,9 +648,9 @@ footer > p {
         color: black;
     }
 
-    .carousel-arrow {
+    /* .carousel-arrow {
         position: absolute; 
-        right: 20px; 
+        right: 10px; 
         top: 50%; 
         transform: translateY(-50%); 
         width: 40px; 
@@ -658,23 +658,43 @@ footer > p {
         opacity: 0.8; 
         pointer-events: none; 
         z-index: 10; 
-        background-color: rgba(244, 244, 242, 0.8); /* Background for the arrow container */
-        border-radius: 20px; /* This will make the background circle around the arrow */
+        background-color: rgba(244, 244, 242, 0.8);
+        border-radius: 20px; 
     }
 
     .carousel-arrow svg {
         width: 100%; 
         height: 100%; 
-        fill: rgb(73, 84, 100); /* Color for the arrow SVG */
+        fill: rgb(73, 84, 100); 
     }
 
-    /* Fade out the arrow as user hovers or touches the carousel */
-    .wall-coverings.carousel-view:focus-within .carousel-arrow, 
-    .carousel-arrow:hover {
+    .wall-coverings.carousel-view:hover .carousel-arrow,
+    .wall-coverings.carousel-view:focus-within .carousel-arrow {
         opacity: 0;
         transition: opacity 0.3s;
-    }
+    } */
 
+    .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px; /* Spacing between the carousel and the indicators */
+    }
+    
+    .carousel-indicators .dot {
+        width: 8px;
+        height: 8px;
+        background-color: rgb(200, 200, 200); /* Inactive dot color */
+        border-radius: 50%; /* Makes the dots circular */
+        margin: 0 5px; /* Spacing between dots */
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .carousel-indicators .dot.active {
+        background-color: rgb(73, 84, 100); /* Active dot color */
+    }
+    
 
 
     /* About Page's CSS */
