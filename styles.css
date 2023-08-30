@@ -696,6 +696,12 @@ footer > p {
     .carousel-indicators .dot.active {
         background-color: rgb(73, 84, 100); /* Active dot color */
     }
+
+    .wall-covering-description {
+        flex: 1;
+        padding: 20px 10px 10px 20px;
+        box-sizing: border-box;
+    }
     
 
 
