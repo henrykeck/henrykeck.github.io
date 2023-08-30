@@ -505,12 +505,12 @@ footer > p {
 
     /* Header */
     header {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 5px 10px;
     }
 
     nav ul {
-        flex-direction: row;
+        flex-direction: row; /* stack the menu items vertically */
         align-items: center;
         justify-content: center;
         gap: 20px;
@@ -530,13 +530,13 @@ footer > p {
     }
 
     .nav-text {
-        display: none;  /* Hide text on smaller screens */
+        display: none;
     }
 
     .icon-wrapper svg {
         width: 20px;
         height: 20px;
-        margin-bottom: 10px;
+        /* removed margin-bottom property */
     }
 
     /* Main Content */
