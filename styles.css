@@ -167,12 +167,8 @@ main {
 
 .serving::before {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0; /* Adjusted to align with container padding */
-    right: 0; /* Adjusted to align with container padding */
-    bottom: 0;
-    background-image: url('artifacts/marble_wallpaper.jpg');
+    /* ... other properties ... */
+    background-image: url('artifacts/content-photos/filler/marble_wallpaper.jpg'); /* Default to the largest resolution */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -603,6 +599,11 @@ footer > p {
         display: none;
     }
 
+    .serving::before {
+        background-image: url('artifacts/content-photos/filler/marble_wallpaper-mobile.jpg');
+    }
+
+
     /* Info Section */
     .info-section {
         flex-direction: column-reverse;
@@ -744,4 +745,10 @@ footer > p {
         grid-template-columns: 1fr;
     }
 
+}
+
+@media (max-width: 1440px) and (min-width: 933px) {
+    .serving::before {
+        background-image: url('artifacts/content-photos/filler/marble_wallpaper-desktop.jpg');
+    }
 }
