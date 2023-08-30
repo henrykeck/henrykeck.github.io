@@ -416,8 +416,8 @@ CONTACT SECTION
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Elevation shadow */
     padding: 10px; /* Increased padding for better appearance */
     border-radius: 5px; /* Slight rounding of corners */
-    border-color: rgb(73, 84, 100);
-    border-width: 2px;
+    border-color: rgba(73, 84, 100, 0.8);
+    border-width: 1px;
     border-style: solid;
 }
 
