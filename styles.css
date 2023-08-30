@@ -331,7 +331,7 @@ main {
 }
 
 .grid-item:nth-child(2) {
-    background-image: url('artifacts/content-photos/wallcovering-types/commercial_square.jpg');
+    background-image: url('artifacts/commercial_square.jpg');
 }
 
 .grid-item:nth-child(3) {
@@ -351,11 +351,11 @@ main {
 }
 
 .grid-item:nth-child(7) {
-    background-image: url('artifacts/content-photos/wallcovering-types/wood_square.jpg');
+    background-image: url('artifacts/wood_square.jpg');
 }
 
 .grid-item:nth-child(8) {
-    background-image: url('artifacts/content-photos/wallcovering-types/panel_square.jpg');
+    background-image: url('artifacts/panel_square.jpg');
 }
 
 .grid-item:nth-child(9) {
