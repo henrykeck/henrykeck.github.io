@@ -91,13 +91,28 @@ function updateActiveDot(index) {
     document.querySelectorAll('.carousel-indicators .dot')[index].classList.add('active');
 }
 
+// Debounce function to delay event handler execution
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
 // Generate dots
 for (let i = 0; i < carouselItems.length; i++) {
     let dot = document.createElement('div');
     dot.classList.add('dot');
     if(i === 0) dot.classList.add('active'); // Initially, the first dot is active
 
-    dot.addEventListener('click', function() {
+    dot.addEventListener('click', function(event) {
+        event.stopPropagation();
+
         // Scroll the carousel to the clicked dot's corresponding item
         carouselItems[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         
@@ -115,13 +130,14 @@ for (let i = 0; i < carouselItems.length; i++) {
 
 // Add click event to each grid-item
 carouselItems.forEach((item, index) => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function(event) {
+        event.stopPropagation();
         updateActiveDot(index);
     });
 });
 
-// Check which carousel item is in view and update dots
-document.querySelector('.wall-coverings.carousel-view').addEventListener('scroll', function() {
+// Check which carousel item is in view and update dots using debounced scroll event
+document.querySelector('.wall-coverings.carousel-view').addEventListener('scroll', debounce(function() {
     let maxVisibleIndex = 0;
     let maxVisiblePercentage = 0;
 
@@ -138,4 +154,4 @@ document.querySelector('.wall-coverings.carousel-view').addEventListener('scroll
     });
 
     updateActiveDot(maxVisibleIndex);
-});
+}, 100));
