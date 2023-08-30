@@ -724,6 +724,7 @@ footer > p {
 
     .contact-info, .contact-form {
         margin: 0;
+        width: 90%;
     }
 
     .contact-form form {
