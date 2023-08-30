@@ -647,6 +647,27 @@ footer > p {
         color: black;
     }
 
+    .carousel-arrow {
+        position: absolute; /* Position the arrow absolutely within the carousel */
+        right: 10px; /* Place it on the right side */
+        top: 50%; /* Center it vertically */
+        transform: translateY(-50%); /* Offset the translation for true vertical centering */
+        width: 30px; /* Width of the arrow */
+        height: 30px; /* Height of the arrow */
+        background: url('path_to_your_arrow_image.png') no-repeat center center;
+        background-size: contain;
+        opacity: 0.6; /* Make it slightly transparent */
+        pointer-events: none; /* Make sure it doesn't interfere with carousel interaction */
+        z-index: 10; /* Place it above the carousel items */
+    }
+
+    /* Fade out the arrow as user hovers or touches the carousel */
+    .wall-coverings.carousel-view:hover .carousel-arrow,
+    .wall-coverings.carousel-view:focus-within .carousel-arrow {
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
 
     /* About Page's CSS */
     .about {
