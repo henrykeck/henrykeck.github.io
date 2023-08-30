@@ -591,7 +591,7 @@ footer > p {
     /* Wall coverings section */
     .wall-coverings-wrapper {
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
     }
 
     .wall-coverings.grid-view {
@@ -599,7 +599,7 @@ footer > p {
     }
       
     .carousel-container {
-        width: 90%; /* Or any width you want */
+        width: 100%; /* Or any width you want */
         margin: 0 auto; /* This will center the container */
         overflow: hidden; /* This ensures any overflowing content (like your carousel) is hidden from view */
         position: relative;
@@ -613,8 +613,7 @@ footer > p {
         scrollbar-width: none; /* Hide the scrollbar for Mozilla Firefox */
         gap: 10px;
         width: 100%;  /* Ensure it spans the full width of its container */
-        padding: 0 5px;
-        padding-bottom: 10px;
+        padding: 0 10px 10px 10px;
     }
 
     .wall-coverings.carousel-view::-webkit-scrollbar {
