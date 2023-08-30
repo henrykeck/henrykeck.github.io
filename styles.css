@@ -352,8 +352,10 @@ ABOUT PAGE'S CSS
 }
 
 .dave-portrait {
-    width: 25%;                /* Sets the width for the portrait, you can adjust this */
-    margin-right: 20px;       /* Adds some spacing between the image and the content */
+    width: 60%;
+    margin-right: 0;
+    margin-right: 0;
+    display: block;
 }
 
 .about-content {
