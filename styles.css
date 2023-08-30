@@ -558,23 +558,9 @@ footer > p {
         width: 180px;
     }
 
-    /* Serving the Pacific Northwest section */
+    /* Hide serving section on mobile */
     .serving {
-        grid-template-columns: 1fr;
-        padding: 20px 0;
-    }
-
-    .serving::before {
-        display: none; /* Hide the background on mobile for better readability */
-    }
-
-    .dave-portrait {
-        width: 80%;
-        transform: 50% 50%;
-    }
-
-    .serving-content {
-        width: 100%;
+        display: none;
     }
 
     /* Info Section */
