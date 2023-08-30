@@ -82,6 +82,15 @@ function craftEmail() {
 var carouselItems = document.querySelectorAll('.wall-coverings.carousel-view .grid-item');
 var indicatorsContainer = document.querySelector('.carousel-indicators');
 
+// Function to update active dot
+function updateActiveDot(index) {
+    // Remove 'active' class from all dots
+    document.querySelectorAll('.carousel-indicators .dot').forEach(d => d.classList.remove('active'));
+    
+    // Add 'active' class to the corresponding dot
+    document.querySelectorAll('.carousel-indicators .dot')[index].classList.add('active');
+}
+
 // Generate dots
 for (let i = 0; i < carouselItems.length; i++) {
     let dot = document.createElement('div');
@@ -91,22 +100,25 @@ for (let i = 0; i < carouselItems.length; i++) {
     dot.addEventListener('click', function() {
         // Scroll the carousel to the clicked dot's corresponding item
         carouselItems[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-
+        
         // Remove 'selected' class from all items
         carouselItems.forEach(item => item.classList.remove('selected'));
-
+        
         // Add 'selected' class to the clicked item
         carouselItems[i].classList.add('selected');
-
-        // Remove 'active' class from all dots
-        document.querySelectorAll('.carousel-indicators .dot').forEach(d => d.classList.remove('active'));
-
-        // Add 'active' class to the clicked dot
-        dot.classList.add('active');
+        
+        updateActiveDot(i);
     });
 
     indicatorsContainer.appendChild(dot);
 }
+
+// Add click event to each grid-item
+carouselItems.forEach((item, index) => {
+    item.addEventListener('click', function() {
+        updateActiveDot(index);
+    });
+});
 
 // Check which carousel item is in view and update dots
 document.querySelector('.wall-coverings.carousel-view').addEventListener('scroll', function() {
@@ -125,8 +137,5 @@ document.querySelector('.wall-coverings.carousel-view').addEventListener('scroll
         }
     });
 
-    document.querySelectorAll('.carousel-indicators .dot').forEach((dot, index) => {
-        dot.classList.toggle('active', index === maxVisibleIndex);
-    });
+    updateActiveDot(maxVisibleIndex);
 });
-
