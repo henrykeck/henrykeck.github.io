@@ -614,6 +614,7 @@ footer > p {
         gap: 10px;
         width: 100%;  /* Ensure it spans the full width of its container */
         padding: 0 10px;
+        padding-bottom: 10px;
     }
 
     .wall-coverings.carousel-view::-webkit-scrollbar {
