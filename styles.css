@@ -394,9 +394,13 @@ CONTACT SECTION
     align-items: center; /* Vertically centers the content */
     justify-content: center; /* Horizontally centers the content */
     margin: 30px;
+}
+
+.contact-form {
     border-radius: 5px; /* Slight rounding of corners */
     border-color: rgb(73, 84, 100);
     border-width: 2px;
+    border-style: solid;
 }
 
 .contact-info-content {
