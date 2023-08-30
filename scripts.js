@@ -70,8 +70,6 @@ const carouselItems = document.querySelectorAll('.wall-coverings.carousel-view .
 const indicatorsContainer = document.querySelector('.carousel-indicators');
 const carouselView = document.querySelector('.wall-coverings.carousel-view');
 
-// carouselView.addEventListener('scroll', handleScroll);
-
 let isProgrammaticScroll = false; // New flag
 
 // Handlers
@@ -109,31 +107,6 @@ function centerAndHighlightItem(index) {
     updateActiveDot(index);
     updateDescriptionBasedOnType(index);
 }
-
-// function handleScroll() {
-//     if (isProgrammaticScroll) {
-//         return;  // If the flag is true, we won't execute the rest of the function
-//     }
-
-//     let maxVisibleIndex = 0;
-//     let maxVisiblePercentage = 0;
-
-//     carouselItems.forEach((item, index) => {
-//         const rect = item.getBoundingClientRect();
-//         const visiblePercentage = Math.min(window.innerWidth - rect.left, rect.width) / rect.width;
-
-//         if (visiblePercentage > maxVisiblePercentage) {
-//             maxVisiblePercentage = visiblePercentage;
-//             maxVisibleIndex = index;
-//         }
-//     });
-
-//     if (maxVisibleIndex !== lastSelectedIndex) {
-//         updateActiveDot(maxVisibleIndex);
-//         updateDescriptionBasedOnType(maxVisibleIndex);
-//         lastSelectedIndex = maxVisibleIndex;  // Update the last selected index
-//     }
-// }
 
 // Utilities for Carousel behaviors
 function updateActiveDot(index) {
