@@ -108,7 +108,13 @@ function centerAndHighlightItem(index) {
     updateDescriptionBasedOnType(index);
 }
 
+let isProgrammaticScroll = false;
+
 function handleScroll() {
+    if (isProgrammaticScroll) {
+        return;  // Do not handle this scroll event if it was caused programmatically
+    }
+
     let maxVisibleIndex = 0;
     let maxVisiblePercentage = 0;
 
@@ -125,6 +131,7 @@ function handleScroll() {
     updateActiveDot(maxVisibleIndex);
     updateDescriptionBasedOnType(maxVisibleIndex);
 }
+
 
 // Utilities for Carousel behaviors
 function updateActiveDot(index) {

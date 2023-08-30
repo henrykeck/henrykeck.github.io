@@ -606,6 +606,14 @@ footer > p {
         gap: 10px;
         margin: 0 auto 0 auto;
         width: 90vw;
+        padding-left: 10px;
+    }
+
+    /* Add a pseudo-element to handle right padding */
+    .wall-coverings.carousel-view::after {
+        content: '';
+        width: 10px; /* Equivalent to the gap you want. Adjust if necessary. */
+        flex: none; /* This ensures the pseudo-element doesn't grow or shrink with other flex items. */
     }
 
     .wall-coverings.carousel-view::-webkit-scrollbar {
