@@ -171,12 +171,12 @@ main {
     align-items: center; /* vertically centers the child items */
     justify-content: flex-end; /* pushes the child items to the right */
     grid-column: 2;
-    padding: 0 20px; /* optional padding to ensure there's some space between the image and the grid boundaries */
+    padding: 0 10px; /* optional padding to ensure there's some space between the image and the grid boundaries */
 }
 #dave-portrait {
     max-width: 100%;
     height: auto;
-    width: 80%;
+    width: 60%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     margin: 0;
