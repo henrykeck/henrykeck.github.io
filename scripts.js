@@ -19,39 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     gridItems[0].click();
 });
 
-function getDescription(type, targetDiv) {
-    const fileName = type.toLowerCase().replace(/ /g, '_');
-    const fileURL = `artifacts/descriptions/${fileName}.txt`;
-
-    fetch(fileURL)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(text => {
-            // Split the content by line
-            const lines = text.split('\n').filter(line => line.trim() !== '');
-
-            // Format the text
-            const formattedText = lines.map((line, index) => {
-                if (index === 0) {
-                    return `<h2>${line}</h2>`;
-                } else {
-                    return `<p>${line}</p>`;
-                }
-            }).join('');
-
-            // Update the target div with the formatted text
-            targetDiv.innerHTML = formattedText;
-        })
-        .catch(error => {
-            console.log('There was a problem with the fetch operation:', error.message);
-            targetDiv.innerHTML = 'Description not found.';
-        });
-}
-
 function craftEmail() {
     // Get values
     const firstName = document.getElementById('first-name').value;
@@ -78,23 +45,29 @@ function craftEmail() {
     window.location.href = `mailto:dave@keckpaperhanging.com?subject=${subject}&body=${body}`;
 }
 
-// Get carousel items and indicators container
-var carouselItems = document.querySelectorAll('.wall-coverings.carousel-view .grid-item');
-var indicatorsContainer = document.querySelector('.carousel-indicators');
+// Utils
+function getDescription(type, targetDiv) {
+    const fileName = type.toLowerCase().replace(/ /g, '_');
+    const fileURL = `artifacts/descriptions/${fileName}.txt`;
 
-// Function to update active dot
-function updateActiveDot(index) {
-    // Remove 'active' class from all dots
-    document.querySelectorAll('.carousel-indicators .dot').forEach(d => d.classList.remove('active'));
-    
-    // Add 'active' class to the corresponding dot
-    document.querySelectorAll('.carousel-indicators .dot')[index].classList.add('active');
+    fetch(fileURL)
+        .then(response => response.ok ? response.text() : Promise.reject('Network response was not ok'))
+        .then(text => {
+            const lines = text.split('\n').filter(line => line.trim() !== '');
+            const formattedText = lines.map((line, index) => 
+                index === 0 ? `<h2>${line}</h2>` : `<p>${line}</p>`
+            ).join('');
+            targetDiv.innerHTML = formattedText;
+        })
+        .catch(error => {
+            console.log('Fetch operation error:', error);
+            targetDiv.innerHTML = 'Description not found.';
+        });
 }
 
-// Debounce function to delay event handler execution
 function debounce(func, wait) {
     let timeout;
-    return function executedFunction(...args) {
+    return (...args) => {
         const later = () => {
             clearTimeout(timeout);
             func(...args);
@@ -104,50 +77,31 @@ function debounce(func, wait) {
     };
 }
 
-// Generate dots
-for (let i = 0; i < carouselItems.length; i++) {
-    let dot = document.createElement('div');
-    dot.classList.add('dot');
-    if(i === 0) dot.classList.add('active'); // Initially, the first dot is active
+// DOM elements
+const carouselItems = document.querySelectorAll('.wall-coverings.carousel-view .grid-item');
+const indicatorsContainer = document.querySelector('.carousel-indicators');
 
-    dot.addEventListener('click', function(event) {
-        event.stopPropagation();
-
-        // Scroll the carousel to the clicked dot's corresponding item
-        carouselItems[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        
-        // Remove 'selected' class from all items
-        carouselItems.forEach(item => item.classList.remove('selected'));
-        
-        // Add 'selected' class to the clicked item
-        carouselItems[i].classList.add('selected');
-        
-        updateActiveDot(i);
-        updateDescriptionBasedOnType(i);
-    });
-
-    indicatorsContainer.appendChild(dot);
+// Handlers
+function handleDotClick(index) {
+    carouselItems[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    carouselItems.forEach(item => item.classList.remove('selected'));
+    carouselItems[index].classList.add('selected');
+    updateActiveDot(index);
+    updateDescriptionBasedOnType(index);
 }
 
-// Add click event to each grid-item
-carouselItems.forEach((item, index) => {
-    item.addEventListener('click', function(event) {
-        event.stopPropagation();
-        updateActiveDot(index);
-        updateDescriptionBasedOnType(index);
-    });
-});
+function handleGridItemClick(index) {
+    updateActiveDot(index);
+    updateDescriptionBasedOnType(index);
+}
 
-// Check which carousel item is in view and update dots using debounced scroll event
-document.querySelector('.wall-coverings.carousel-view').addEventListener('scroll', debounce(function() {
+function handleScroll() {
     let maxVisibleIndex = 0;
     let maxVisiblePercentage = 0;
 
     carouselItems.forEach((item, index) => {
-        let rect = item.getBoundingClientRect();
-        let width = rect.width;
-        let visibleWidth = Math.min(window.innerWidth - rect.left, width);
-        let visiblePercentage = visibleWidth / width;
+        const rect = item.getBoundingClientRect();
+        const visiblePercentage = Math.min(window.innerWidth - rect.left, rect.width) / rect.width;
 
         if (visiblePercentage > maxVisiblePercentage) {
             maxVisiblePercentage = visiblePercentage;
@@ -157,20 +111,42 @@ document.querySelector('.wall-coverings.carousel-view').addEventListener('scroll
 
     updateActiveDot(maxVisibleIndex);
     updateDescriptionBasedOnType(maxVisibleIndex);
-}, 100));
+}
+
+// Utilities for Carousel behaviors
+function updateActiveDot(index) {
+    document.querySelectorAll('.carousel-indicators .dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
 
 function getTypeFromGridItem(index) {
-    const item = carouselItems[index];
-    const span = item.querySelector('span');
+    const span = carouselItems[index].querySelector('span');
     return span ? span.textContent : null;
 }
 
 function updateDescriptionBasedOnType(index) {
     const type = getTypeFromGridItem(index);
-    if(type) {
+    if (type) {
         const targetDiv = document.querySelector('.wall-covering-description');
         getDescription(type, targetDiv);
     }
 }
 
+// Event bindings
+carouselItems.forEach((item, index) => {
+    item.addEventListener('click', () => handleGridItemClick(index));
+});
+
+for (let i = 0; i < carouselItems.length; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('dot', i === 0 && 'active');
+    dot.addEventListener('click', () => handleDotClick(i));
+    indicatorsContainer.appendChild(dot);
+}
+
+document.querySelector('.wall-coverings.carousel-view')
+    .addEventListener('scroll', debounce(handleScroll, 100));
+
+// Initial setup
 updateDescriptionBasedOnType(0);
