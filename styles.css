@@ -654,11 +654,15 @@ footer > p {
         transform: translateY(-50%); /* Offset the translation for true vertical centering */
         width: 30px; /* Width of the arrow */
         height: 30px; /* Height of the arrow */
-        background: url('path_to_your_arrow_image.png') no-repeat center center;
-        background-size: contain;
         opacity: 0.6; /* Make it slightly transparent */
         pointer-events: none; /* Make sure it doesn't interfere with carousel interaction */
         z-index: 10; /* Place it above the carousel items */
+        color: rgb(244, 244, 242); /* Change this color to match your design */
+    }
+
+    .carousel-arrow svg {
+        width: 100%; /* Make the SVG take the full width of its container */
+        height: 100%; /* Make the SVG take the full height of its container */
     }
 
     /* Fade out the arrow as user hovers or touches the carousel */
