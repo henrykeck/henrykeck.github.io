@@ -65,22 +65,12 @@ function getDescription(type, targetDiv) {
         });
 }
 
-function debounce(func, wait) {
-    let timeout;
-    return (...args) => {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
 // DOM elements
 const carouselItems = document.querySelectorAll('.wall-coverings.carousel-view .grid-item');
 const indicatorsContainer = document.querySelector('.carousel-indicators');
 const carouselView = document.querySelector('.wall-coverings.carousel-view');
+
+carouselView.addEventListener('scroll', handleScroll);
 
 let isProgrammaticScroll = false; // New flag
 
@@ -145,8 +135,6 @@ function handleScroll() {
     }
 }
 
-
-
 // Utilities for Carousel behaviors
 function updateActiveDot(index) {
     document.querySelectorAll('.carousel-indicators .dot').forEach((dot, i) => {
@@ -179,9 +167,6 @@ for (let i = 0; i < carouselItems.length; i++) {
     dot.addEventListener('click', () => handleDotClick(i));
     indicatorsContainer.appendChild(dot);
 }
-
-const handleDebouncedScroll = debounce(handleScroll, 100);
-// carouselView.addEventListener('scroll', handleDebouncedScroll);
 
 // Initial setup
 updateDescriptionBasedOnType(0);
