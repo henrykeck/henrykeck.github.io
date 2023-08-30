@@ -178,7 +178,7 @@ main {
 
 
 /* Mobile-first approach, assuming the mobile styles by default */
-.dave-portrait {
+#dave-portrait {
     max-width: 100%;
     height: auto; 
     width: 80%; /* 80% width on mobile */
@@ -189,7 +189,7 @@ main {
 
 /* Media query for desktop screens */
 @media only screen and (min-width: 933px) {
-    .dave-portrait {
+    #dave-portrait {
         width: 30%; /* 30% width on desktop */
     }
 }
