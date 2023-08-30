@@ -181,7 +181,7 @@ for (let i = 0; i < carouselItems.length; i++) {
 }
 
 const handleDebouncedScroll = debounce(handleScroll, 100);
-carouselView.addEventListener('scroll', handleDebouncedScroll);
+// carouselView.addEventListener('scroll', handleDebouncedScroll);
 
 // Initial setup
 updateDescriptionBasedOnType(0);
