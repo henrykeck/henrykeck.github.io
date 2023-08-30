@@ -86,6 +86,8 @@ var indicatorsContainer = document.querySelector('.carousel-indicators');
 for (let i = 0; i < carouselItems.length; i++) {
     let dot = document.createElement('div');
     dot.classList.add('dot');
+    if(i === 0) dot.classList.add('active'); // Initially, the first dot is active
+
     dot.addEventListener('click', function() {
         // Scroll the carousel to the clicked dot's corresponding item
         carouselItems[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
@@ -95,7 +97,14 @@ for (let i = 0; i < carouselItems.length; i++) {
 
         // Add 'selected' class to the clicked item
         carouselItems[i].classList.add('selected');
+
+        // Remove 'active' class from all dots
+        document.querySelectorAll('.carousel-indicators .dot').forEach(d => d.classList.remove('active'));
+
+        // Add 'active' class to the clicked dot
+        dot.classList.add('active');
     });
+
     indicatorsContainer.appendChild(dot);
 }
 
@@ -120,3 +129,4 @@ document.querySelector('.wall-coverings.carousel-view').addEventListener('scroll
         dot.classList.toggle('active', index === maxVisibleIndex);
     });
 });
+
