@@ -598,7 +598,7 @@ footer > p {
     }
       
     .carousel-container {
-        width: 80%; /* Or any width you want */
+        width: 90%; /* Or any width you want */
         margin: 0 auto; /* This will center the container */
         overflow: hidden; /* This ensures any overflowing content (like your carousel) is hidden from view */
         position: relative;
@@ -629,7 +629,8 @@ footer > p {
         border-radius: 10px;
         display: flex;
         color: rgb(244, 244, 242);
-        margin-right: 10px; /* Add space between squares */
+        margin-right: 5px;
+        margin-left: 5px; 
         transition: none;
     }
 
