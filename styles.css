@@ -81,6 +81,10 @@ main {
 #company-logo {
     width: 350px;
     height: auto;
+    /* identify filter to apply to png 
+    in order to convert color to rgb(73, 84, 100)
+    https://codepen.io/sosuke/pen/Pjoqqp 
+    */
     filter: invert(32%) sepia(20%) saturate(454%) hue-rotate(176deg) brightness(93%) contrast(92%);
 }
 
