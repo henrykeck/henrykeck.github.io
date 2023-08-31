@@ -327,7 +327,7 @@ main {
 }
 
 .grid-item:nth-child(1) {
-    background-image: url('artifacts/residential_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/residential_square.jpg');
 }
 
 .grid-item:nth-child(2) {
@@ -335,19 +335,19 @@ main {
 }
 
 .grid-item:nth-child(3) {
-    background-image: url('artifacts/fabric_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/fabric_square.jpg');
 }
 
 .grid-item:nth-child(4) {
-    background-image: url('artifacts/mural_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/mural_square.jpg');
 }
 
 .grid-item:nth-child(5) {
-    background-image: url('artifacts/sisal_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/sisal_square.jpg');
 }
 
 .grid-item:nth-child(6) {
-    background-image: url('artifacts/whiteboard_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/whiteboard_square.jpg');
 }
 
 .grid-item:nth-child(7) {
@@ -359,7 +359,7 @@ main {
 }
 
 .grid-item:nth-child(9) {
-    background-image: url('artifacts/foil_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/fabric_square.jpg');
 }
 
 /*
