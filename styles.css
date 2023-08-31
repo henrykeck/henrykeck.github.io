@@ -763,13 +763,11 @@ footer > p {
 }
 
 
-
 .game-section {
     padding: 50px;
-    overflow: hidden;
-  }
-  
-  .game-section .custom-carousel {
+}
+
+.game-section .custom-carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -777,25 +775,43 @@ footer > p {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding: 40px;
-  }
-  
-  .game-section .custom-carousel::-webkit-scrollbar {
+}
+
+.game-section .custom-carousel::-webkit-scrollbar {
     display: none;
-  }
-  
-  .game-section .item {
+}
+
+.game-section .item {
     flex: 0 0 320px;
     height: 400px;
     background: #343434 no-repeat center center / cover;
     margin: 0 15px;
-    scroll-snap-align: start;
     border-radius: 16px;
     position: relative;
-    transition: transform 0.5s;
     overflow: hidden;
-  }
-  
-  .game-section .item:after {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.game-section .item::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: transparent;
+    border-radius: inherit;
+    transition: transform 0.5s;
+    z-index: 0;  /* Positioned below the content */
+}
+
+.game-section .item:hover::before {
+    transform: scale(1.1);
+    background: rgba(0, 0, 0, 0.3); /* You can adjust this if needed */
+}
+
+.game-section .item:after {
     content: "";
     display: block;
     position: absolute;
@@ -804,17 +820,13 @@ footer > p {
     left: 0;
     top: 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-  }
-  
-  .game-section .item-desc {
+    z-index: 1; /* Positioned above the scaling element, but below the content */
+}
+
+.game-section .item-desc {
     padding: 0 24px 12px;
     color: #fff;
     position: relative;
-    z-index: 1;
+    z-index: 2;  /* Positioned above all other elements */
     bottom: 0;
-  }
-  
-  .game-section .item:hover {
-    transform: scale(1.1);
-  }
-  
+}
