@@ -848,6 +848,12 @@ footer > p {
     left: 0;
     right: 0;
     z-index: 3;
+    opacity: 1; /* Fully visible initially */
+    transition: opacity 0.5s; /* Add a smooth transition for the fade effect */
+}
+
+.game-section .item:hover .item-desc {
+    opacity: 0; /* Fully transparent when item is hovered */
 }
 
 .item-overlay-text {
