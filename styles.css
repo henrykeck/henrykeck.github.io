@@ -839,7 +839,6 @@ footer > p {
     background-image: linear-gradient(transparent 50%, rgba(73, 84, 100, 0.6));
     z-index: 1;
 }
-
 .game-section .item-desc {
     padding: 0 24px 12px;
     color: rgb(244, 244, 242);
