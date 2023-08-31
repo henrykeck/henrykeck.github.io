@@ -213,8 +213,10 @@ main {
 
 .serving-content {
     align-self: center;
+    position:relative;
     width: fit-content;
-    padding: 0 0 0 19rem;
+    max-width: 50%;
+    left: 50%;
 }
 
 .info-section {
@@ -525,6 +527,7 @@ ABOUT PAGE'S CSS
     background-color: rgba(244, 244, 242, 0.8);
     border-radius: 0.625rem;
     width: fit-content;
+    padding: 1.25rem;
 }
 
 .about-content h2 {
