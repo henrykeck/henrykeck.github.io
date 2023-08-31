@@ -774,7 +774,7 @@ footer > p {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding: 40px;
+    padding: 15px 40px;
 }
 
 .game-section .custom-carousel::-webkit-scrollbar {
@@ -785,10 +785,11 @@ footer > p {
     flex: 0 0 320px;
     height: 400px;
     background: #343434 no-repeat center center / cover;
-    margin: 0 15px;
+    margin: 15px 15px;
     position: relative;
     transition: transform 0.5s;
     overflow: hidden;
+    border-radius: 16px; /* Ensuring item has rounded corners */
     will-change: transform;
     backface-visibility: hidden;
 }
@@ -800,8 +801,8 @@ footer > p {
     width: 100%;
     left: 0;
     top: 0;
-    border-radius: 16px;
-    background-color: rgba(255, 255, 255, 0.01); /* Almost transparent, just to ensure it's rendered */
+    border-radius: 16px; /* Ensuring pseudo-element has rounded corners */
+    background-color: rgba(255, 255, 255, 0.01); /* Almost transparent */
     z-index: 2;
 }
 
@@ -813,6 +814,7 @@ footer > p {
     width: 100%;
     left: 0;
     top: 0;
+    border-radius: 16px; /* Ensuring pseudo-element has rounded corners */
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
     z-index: 1;
 }
