@@ -765,7 +765,7 @@ footer > p {
 
 
 .game-section {
-    padding: 100px;
+    padding: 40px 50px 40px;
     overflow: hidden;
   }
   
@@ -776,6 +776,7 @@ footer > p {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    padding: 40px;
   }
   
   .game-section .custom-carousel::-webkit-scrollbar {
