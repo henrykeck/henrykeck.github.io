@@ -825,18 +825,21 @@ footer > p {
     left: 0;
     top: 0;
     border-radius: 16px; /* Ensuring pseudo-element has rounded corners */
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    background-image: linear-gradient(rgba(73, 84, 100, 0), rgba(73, 84, 100, 0.8)); /* Start from transparent to 80% opacity */
     z-index: 1;
 }
 
+
 .game-section .item-desc {
     padding: 0 24px 12px;
-    color: #fff;
-    position: relative;
-    /* z-index: 3; */
-    bottom: 0;
+    color: rgb(244, 244, 242);
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
     z-index: 1;
 }
+
 
 .game-section .item:hover {
     transform: scale(1.1);
