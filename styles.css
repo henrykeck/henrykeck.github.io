@@ -107,9 +107,8 @@ main {
 
 .inspirational {
     position: relative;
-    max-width: 100%;
     width: auto;
-    height: 31.25rem;
+    max-height: 34rem;
     overflow: hidden;
     padding-bottom: 2.5rem;
 }
@@ -166,7 +165,7 @@ main {
 .content-container {
     max-width: 80%; 
     margin: 0 auto; 
-    padding: 0 2.5rem; 
+    padding: 2.5rem; 
 }
 
 .serving {
