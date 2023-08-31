@@ -831,6 +831,7 @@ footer > p {
 
 
 .game-section .item-desc {
+    background-color: rgba(187, 191, 202, 0.3);
     padding: 0 24px 12px;
     color: rgb(244, 244, 242);
     position: absolute;
