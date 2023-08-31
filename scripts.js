@@ -48,7 +48,7 @@ function craftEmail() {
 // Utils
 function getDescription(type, targetDiv) {
     const fileName = type.toLowerCase().replace(/ /g, '_');
-    const fileURL = `artifacts/descriptions/${fileName}.txt`;
+    const fileURL = `artifacts/wallcovering-type-descriptions/${fileName}.txt`;
 
     fetch(fileURL)
         .then(response => response.ok ? response.text() : Promise.reject('Network response was not ok'))
