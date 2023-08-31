@@ -762,9 +762,9 @@ footer > p {
     }
 }
 
-
 .game-section {
     padding: 50px;
+    overflow: hidden;
 }
 
 .game-section .custom-carousel {
@@ -786,8 +786,8 @@ footer > p {
     height: 400px;
     background: #343434 no-repeat center center / cover;
     margin: 0 15px;
-    border-radius: 16px;
     position: relative;
+    transition: transform 0.5s;
     overflow: hidden;
     will-change: transform;
     backface-visibility: hidden;
@@ -800,15 +800,9 @@ footer > p {
     width: 100%;
     left: 0;
     top: 0;
-    background: transparent;
-    border-radius: inherit;
-    transition: transform 0.5s;
-    z-index: 0;  /* Positioned below the content */
-}
-
-.game-section .item:hover::before {
-    transform: scale(1.1);
-    background: rgba(0, 0, 0, 0.3); /* You can adjust this if needed */
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.01); /* Almost transparent, just to ensure it's rendered */
+    z-index: 2;
 }
 
 .game-section .item:after {
@@ -820,13 +814,17 @@ footer > p {
     left: 0;
     top: 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-    z-index: 1; /* Positioned above the scaling element, but below the content */
+    z-index: 1;
 }
 
 .game-section .item-desc {
     padding: 0 24px 12px;
     color: #fff;
     position: relative;
-    z-index: 2;  /* Positioned above all other elements */
+    z-index: 3;
     bottom: 0;
+}
+
+.game-section .item:hover {
+    transform: scale(1.1);
 }
