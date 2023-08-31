@@ -839,7 +839,7 @@ footer > p {
     bottom: 12px;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 3;
 }
 
 .game-section .overlay-text {
@@ -850,6 +850,7 @@ footer > p {
     text-align: center;
     background-color: rgba(73, 84, 100, 0.8);
     border-radius: 10px;
+    z-index: 3;
 }
 
 .game-section .item:hover {
