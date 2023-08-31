@@ -842,11 +842,12 @@ footer > p {
     z-index: 3;
 }
 
-.game-section .overlay-text {
+.item-overlay-text {
     padding: 2px 2px;
     color: rgb(244, 244, 242);
     position: absolute;
-    /* transform: translate(-50%, -50%); */
+    width: calc(100% - 48px);
+    transform: translate(-50%, -50%);
     text-align: center;
     background-color: rgba(73, 84, 100, 0.8);
     border-radius: 10px;
