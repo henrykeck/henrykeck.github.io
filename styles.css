@@ -765,43 +765,43 @@ footer > p {
 
 
 /* ****** Common Element CSS Start ******/
-/* * {
+.game-section * {
   margin: 0px;
   padding: 0px;
 }
-body {
+.game-section body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
-.clear {
+.game-section.clear {
   clear: both;
 }
-img {
+.game-section img {
   max-width: 100%;
   border: 0px;
 }
-ul,
-ol {
+.game-section ul,
+.game-section ol {
   list-style: none;
 }
-a {
+.game-section a {
   text-decoration: none;
   color: inherit;
   outline: none;
   transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
 }
-a:focus,
-a:active,
-a:visited,
-a:hover {
+.game-section a:focus,
+.game-section a:active,
+.game-section a:visited,
+.game-section a:hover {
   text-decoration: none;
   outline: none;
 }
-a:hover {
+.game-section a:hover {
   color: #e73700;
 }
-h2 {
+.game-section h2 {
   margin-bottom: 48px;
   padding-bottom: 16px;
   font-size: 20px;
@@ -810,15 +810,15 @@ h2 {
   position: relative;
   text-transform: capitalize;
 }
-h3 {
+.game-section h3 {
   margin: 0 0 10px;
   font-size: 28px;
   line-height: 36px;
 }
-button {
+.game-section button {
   outline: none !important;
-} */
-/******* Common Element CSS End ******** */
+} 
+/******* Common Element CSS End ********/
 
 /* -------- title style ------- */
 .line-title {
