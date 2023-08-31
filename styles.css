@@ -110,6 +110,14 @@ main {
     object-fit: cover;
 }
 
+.inspirational h1 {
+    margin: 0;
+    padding: 10px 0px;
+    font-family: 'Candara', sans-serif;
+    font-size: 20px;
+    color: rgb(244, 244, 242);
+}
+
 .overlay-text {
     position: absolute;
     top: 50%;
