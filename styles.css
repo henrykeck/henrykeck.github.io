@@ -60,7 +60,7 @@ nav li a {
     gap: 0.375rem;  /* adjust this value based on your needs */
     padding: 0.375rem;
     box-sizing: border-box;
-    border: 0.05rem solid transparent;  /* Transparent border */
+    border: 0.063rem solid transparent;  /* Transparent border */
     border-radius: 0.375rem;
     transition: border 0.3s ease;
 }
@@ -436,7 +436,7 @@ CONTACT SECTION
     padding: 1.25rem 0.625rem 0.625rem; /* Increased padding for better appearance */
     border-radius: 0.25rem;
     border-color: rgba(73, 84, 100, 0.6);
-    border-width: 0.05rem;
+    border-width: 0.063rem;
     border-style: solid;
 }
 
@@ -474,7 +474,7 @@ CONTACT SECTION
 .contact-form input[type="email"],
 .contact-form textarea {
     border-radius: 0.25rem; /* adjust as per your preference */
-    border: 0.05rem solid #ccc; /* This will add a slight border; you can adjust or remove as needed */
+    border: 0.063rem solid #ccc; /* This will add a slight border; you can adjust or remove as needed */
     padding: 0.25rem 0.625rem; /* giving some inner padding for better aesthetics */
 }
 
