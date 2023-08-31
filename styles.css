@@ -849,13 +849,9 @@ footer > p {
     color: rgb(244, 244, 242);
     background-color: rgba(73, 84, 100, 0.8);
     padding: 2px 2px;
-    bottom: 12px;
-    left: 0;
-    right: 0;
     z-index: 0;
     border-radius: 10px;
 }
-
 
 .game-section .item:hover {
     transform: scale(1.1);
