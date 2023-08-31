@@ -1,3 +1,4 @@
 *.py
 sitemap.xml
 robots.txt
+**/old_format/
