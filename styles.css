@@ -1,4 +1,6 @@
-/* Reset some default styles */
+/* 
+GENERAL STYLES 
+*/
 body, h1, h2 {
     margin: 0;
     padding: 0;
@@ -26,7 +28,11 @@ p {
     font-size: var(--font-size-400);
 }
 
-/* Header */
+
+
+/* 
+Header 
+*/
 header {
     display: flex;
     justify-content: space-between;
@@ -80,21 +86,12 @@ nav li a {
     display: inline;  /* Hide by default for mobile-first */
 }
 
-/* Main Content */
-main {
-    margin-top: 4.25rem;  /* Give space for the fixed header */
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* This should center all child items */
-}
-
 #company-logo {
     width: 22rem;
     height: auto;
-    /* identify filter to apply to png 
+    /* identify filter to apply to image 
     in order to convert color to rgb(73, 84, 100)
-    https://codepen.io/sosuke/pen/Pjoqqp 
-    */
+    https://codepen.io/sosuke/pen/Pjoqqp */
     filter: invert(32%) sepia(20%) saturate(454%) hue-rotate(176deg) brightness(93%) contrast(92%);
 }
 
@@ -105,6 +102,20 @@ main {
     filter: invert(32%) sepia(20%) saturate(454%) hue-rotate(176deg) brightness(93%) contrast(92%);
 }
 
+
+
+/* 
+Main Content 
+*/
+main {
+    margin-top: 4.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* FIRST SECTION - MARKETING HEADER */
 .inspirational {
     position: relative;
     width: auto;
@@ -150,8 +161,8 @@ main {
     border: none;
     border-radius: 0.25rem;
     cursor: auto;
-    width: auto; /* This ensures that the button does not stretch */
-    display: block; /* This will make sure the button only takes up the space it needs */
+    width: auto;
+    display: block;
     margin: 0.625rem auto;
 }
 
@@ -162,6 +173,8 @@ main {
     font-size: var(--font-size-400);
 }
 
+
+/* SECOND SECTION - ABOUT KP */
 .content-container {
     max-width: 80%; 
     margin: 0 auto; 
@@ -180,14 +193,16 @@ main {
     align-items: center;
 }
 
-.portrait-wrapper {
+/* .portrait-wrapper {
     display: flex;
-    align-items: center; /* vertically centers the child items */
-    justify-content: flex-end; /* pushes the child items to the right */
+    align-items: center;
+    justify-content: flex-end;
     grid-column: 2;
-    padding: 0 0.625rem; /* optional padding to ensure there's some space between the image and the grid boundaries */
+    padding: 0 0.625rem;
 }
-#dave-portrait, #dave-fun {
+
+#dave-portrait, */
+#dave-fun {
     max-width: 100%;
     height: auto;
     width: 60%;
@@ -206,9 +221,11 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5rem 0; /* Only padding top and bottom */
+    padding: 2.5rem 0;
 }
 
+
+/* THIRD SECTION - MARKETING, MOSTLY*/
 .info-section .text-content {
     flex: 1;
     padding: 1.25rem;
@@ -229,8 +246,8 @@ main {
     border: none;
     border-radius: 0.25rem;
     cursor: auto;
-    width: auto; /* This ensures that the button does not stretch */
-    display: block; /* This will make sure the button only takes up the space it needs */
+    width: auto;
+    display: block;
     margin: 0.625rem auto;
 }
 
@@ -241,6 +258,8 @@ main {
     font-size: var(--font-size-400);
 }
 
+
+/* FOURTH SECTION - WALLCOVERING TYPES */
 .wall-coverings-wrapper {
     display: flex;
     justify-content: space-between;
@@ -261,7 +280,7 @@ main {
 }
 
 .wall-coverings.carousel-view {
-    display: none; /* Hide carousel view by default on larger screens */
+    display: none;
 }
 
 .wall-covering-description {
@@ -342,47 +361,9 @@ main {
     background-image: url('artifacts/content-photos/wallcovering-types/foil_square.webp');
 }
 
-/*
-ABOUT PAGE'S CSS
-*/
-/* Styling for the about section */
-.about {
-    display: flex;             /* This sets up a flexbox layout */
-    justify-content: center;   /* This centers the items horizontally within the flex container */
-    align-items: center;       /* This centers the items vertically within the flex container */
-    padding-top: 3.125rem;         /* Add top padding */
-    padding-bottom: 3.125rem;      /* Add bottom padding */
-}
-
-#dave-fun {
-    width: 60%;
-    margin-right: 0;
-    margin-right: 0;
-    display: block;
-}
-
-.about-content {
-    width: 37.5rem;                /* Sets the width for the content, adjust as per your preference */
-}
-
-.text-background {
-    background-color: rgba(244, 244, 242, 0.8);
-    border-radius: 0.625rem;
-    width: fit-content;
-}
-
-/* Adjusting h2 and p for finer typography details, adjust as per your design */
-.about-content h2 {
-    margin-top: 0;
-}
-
-.about-content p {
-    margin-bottom: 1rem;
-}
-
 
 /*
-CONTACT SECTION
+FINAL SECTION - CONTACT SECTION
 */
 .contact-us {
     display: flex;
@@ -412,13 +393,13 @@ CONTACT SECTION
 
 .contact-form {
     flex: 1;
-    display: flex; /* Enables flexbox */
-    align-items: center; /* Vertically centers the content */
-    justify-content: center; /* Horizontally centers the content */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     margin: 1.875rem;
-    background-color: rgb(232, 232, 232); /* Slightly darker background with a touch of opacity */
+    background-color: rgb(232, 232, 232);
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
-    padding: 1.25rem 0.625rem 0.625rem; /* Increased padding for better appearance */
+    padding: 1.25rem 0.625rem 0.625rem; 
     border-radius: 0.25rem;
     border-color: rgba(73, 84, 100, 0.6);
     border-width: 0.063rem;
@@ -428,42 +409,42 @@ CONTACT SECTION
 .contact-form form {
     display: grid;
     grid-gap: 0.625rem;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-columns: 1fr 1fr; 
 }
 
-/* To make the email, preferred contact, details, and button take full width */
-.contact-form label, #preferred-contact, #email, #details, button {
+.contact-form label, 
+#preferred-contact, 
+#email, 
+#details, 
+button {
     grid-column: span 2;
 }
 
-/* Container for radio buttons */
 #preferred-contact {
     display: flex;
-    flex-direction: column; /* Change to row orientation */
-    gap: 0.625rem; /* Adjust for horizontal space between radio groups */
-    flex-wrap: wrap; /* If the width is limited, they will move to the next line */
+    flex-direction: column; 
+    gap: 0.625rem; 
+    flex-wrap: wrap;
     margin-bottom: 0.625rem;
 }
 
 .radio-group {
-    display: flex; /* This will make sure each radio button and its label are side-by-side */
-    align-items: center; /* This will ensure they're vertically aligned in the center */
+    display: flex; 
+    align-items: center; 
 }
 
 .radio-group input[type="radio"] {
-    margin-right: 0.625rem; /* Adjust this value as needed */
+    margin-right: 0.625rem;
 }
 
-/* Add rounded edges to input boxes and textarea */
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    border-radius: 0.25rem; /* adjust as per your preference */
-    border: 0.063rem solid #ccc; /* This will add a slight border; you can adjust or remove as needed */
-    padding: 0.25rem 0.625rem; /* giving some inner padding for better aesthetics */
+    border-radius: 0.25rem; 
+    border: 0.063rem solid #ccc; 
+    padding: 0.25rem 0.625rem; 
 }
 
-/* Adjust the "Craft Email" button */
 button {
     padding: 0.625rem 1rem;
     background-color: rgb(73, 84, 100);
@@ -486,7 +467,11 @@ footer, footer *, footer *::before, footer *::after {
     box-sizing: border-box;
 }
 
-/* Footer */
+
+
+/* 
+FOOTER 
+*/
 footer {
     padding: 0.625rem;
     background-color: rgb(232, 232, 232);
@@ -512,7 +497,160 @@ footer > p {
     margin-top: 0.25rem; 
 }
 
-/* Responsive styles for screens less than or equal to 932 pixels */
+
+
+/*
+ABOUT PAGE'S CSS
+*/
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+}
+
+#dave-fun {
+    width: 60%;
+    margin-right: 0;
+    margin-right: 0;
+    display: block;
+}
+
+.about-content {
+    width: 37.5rem;
+}
+
+.text-background {
+    background-color: rgba(244, 244, 242, 0.8);
+    border-radius: 0.625rem;
+    width: fit-content;
+}
+
+.about-content h2 {
+    margin-top: 0;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+}
+
+
+
+/*
+GALLERY PAGE
+*/
+.gallery-section {
+    width: 90%;
+    max-width: 90%;
+    padding: 3.125rem;
+    overflow: hidden;
+}
+
+.gallery-section .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 1rem 2.5rem;
+}
+
+.gallery-section .carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-section .item {
+    flex-shrink: 0; 
+    height: 25rem;
+    background: #343434 no-repeat center center / cover;
+    margin: 1rem 1rem;
+    position: relative;
+    transition: transform 0.5s;
+    overflow: hidden;
+    border-radius: 1rem;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.gallery-section .item .image-wrapper {
+    position: relative;
+    height: 100%;
+    width: auto; 
+    overflow: hidden;
+}
+
+.gallery-section .item .carousel-image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto; 
+    position: relative;
+}
+
+.gallery-section .item::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.01);
+    z-index: 2;
+}
+
+.gallery-section .item:after,
+.gallery-section .image-wrapper:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 1rem;
+    background-image: linear-gradient(transparent 50%, rgba(73, 84, 100, 0.6));
+    z-index: 1;
+}
+
+.gallery-section .item-desc {
+    padding: 0 1.5rem 0.75rem;
+    color: rgb(244, 244, 242);
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    opacity: 1; 
+    transition: opacity 0.5s; 
+}
+
+.gallery-section .item:hover .item-desc {
+    opacity: 0; 
+}
+
+.item-overlay-text {
+    padding: 0.625rem;
+    color: rgb(244, 244, 242);
+    max-width: 31.25rem;
+    background-color: rgba(73, 84, 100, 0.8);
+    border-radius: 0.625rem;
+    z-index: 3;
+}
+
+.gallery-section .item:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* 
+RESPONSIVENESS
+*/
 @media only screen and (max-width: 932px) {
 
     /* Header */
@@ -541,6 +679,10 @@ footer > p {
         margin-bottom: 0.625rem;
     }
 
+    #company-logo {
+        width: 11.25rem;
+    }
+
     .nav-text {
         display: none;
     }
@@ -556,14 +698,9 @@ footer > p {
     }
 
     p {
-        max-width: 37.5rem; /* Adjust as needed depending on the font and size */
-        font-family: 'Candara', sans-serif; /* Use a common font */
-        font-size: var(--font-size-400); /* Adjust size accordingly */
-    }  
-
-    /* Adjust logo sizes */
-    #company-logo {
-        width: 11.25rem;
+        max-width: 37.5rem; 
+        font-family: 'Candara', sans-serif; 
+        font-size: var(--font-size-400);
     }
 
     .overlay-text {
@@ -604,7 +741,7 @@ footer > p {
     }
 
     .info-section .text-content, .info-section img {
-        flex: none; /* Resetting to default */
+        flex: none;
         max-width: 100%;
     }
 
@@ -615,9 +752,10 @@ footer > p {
     }
 
     .wall-coverings.grid-view {
-        display: none; /* Hide the grid view on mobile */
+        display: none;
     }
-      
+    
+    /* Wall coverings carousel */
     .carousel-container {
         width: 100%;
         margin: 0 auto; 
@@ -657,7 +795,7 @@ footer > p {
     }
 
     .wall-coverings.carousel-view .grid-item:hover {
-        transform: none; /* Disabling rotation on hover */
+        transform: none;
         box-shadow: none;
     }
 
@@ -668,7 +806,7 @@ footer > p {
     
     .wall-coverings.carousel-view .grid-item span {
         font-size: var(--font-size-300);
-        position: absolute; /* Position absolutely inside the grid-item */
+        position: absolute;
         top: 50%; 
         left: 50%;
         transform: translate(-50%, -50%);
@@ -686,44 +824,24 @@ footer > p {
         width: 100%;
     }
     
-    
     .carousel-indicators .dot {
         width: 0.5rem;
         height: 0.5rem;
-        background-color: rgb(200, 200, 200); /* Inactive dot color */
-        border-radius: 50%; /* Makes the dots circular */
-        margin: 0 0.25rem; /* Spacing between dots */
+        background-color: rgb(200, 200, 200); 
+        border-radius: 50%; 
+        margin: 0 0.25rem; 
         cursor: pointer;
         transition: background-color 0.3s;
     }
     
     .carousel-indicators .dot.active {
-        background-color: rgb(73, 84, 100); /* Active dot color */
+        background-color: rgb(73, 84, 100);
     }
 
     .wall-covering-description {
         flex: 1;
         padding: 1.25rem 0.625rem;
         box-sizing: border-box;
-    }
-    
-
-
-    /* About Page's CSS */
-    .about {
-        flex-direction: column;
-        gap: 1.25rem;
-    }
-
-    #dave-fun {
-        max-width: 100%;
-        height: auto;
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .about-content {
-        width: 100%;
     }
 
     /* Contact Section */
@@ -741,115 +859,27 @@ footer > p {
         grid-template-columns: 1fr;
     }
 
+    /* About Page */
+    .about {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    #dave-fun {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 1440px) and (min-width: 933px) {
     .serving::before {
         background-image: url('artifacts/content-photos/filler/marble_wallpaper-desktop.webp');
     }
-}
-
-.gallery-section {
-    width: 90%;
-    max-width: 90%;
-    padding: 3.125rem;
-    overflow: hidden;
-}
-
-.gallery-section .carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding: 1rem 2.5rem;
-}
-
-.gallery-section .carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.gallery-section .item {
-    flex-shrink: 0; 
-    height: 25rem;
-    background: #343434 no-repeat center center / cover;
-    margin: 1rem 1rem;
-    position: relative;
-    transition: transform 0.5s;
-    overflow: hidden;
-    border-radius: 1rem;
-    will-change: transform;
-    backface-visibility: hidden;
-}
-
-.gallery-section .item .image-wrapper {
-    position: relative;
-    height: 100%;
-    width: auto; /* Flexible width based on the image */
-    overflow: hidden;
-}
-
-.gallery-section .item .carousel-image {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    margin: 0 auto; /* Center the image */
-    position: relative;
-}
-
-.gallery-section .item::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 1rem;
-    background-color: rgba(255, 255, 255, 0.01);
-    z-index: 2;
-}
-
-.gallery-section .item:after,
-.gallery-section .image-wrapper:after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 1rem;
-    background-image: linear-gradient(transparent 50%, rgba(73, 84, 100, 0.6));
-    z-index: 1;
-}
-.gallery-section .item-desc {
-    padding: 0 1.5rem 0.75rem;
-    color: rgb(244, 244, 242);
-    position: absolute;
-    bottom: 0.75rem;
-    left: 0;
-    right: 0;
-    z-index: 3;
-    opacity: 1; /* Fully visible initially */
-    transition: opacity 0.5s; /* Add a smooth transition for the fade effect */
-}
-
-.gallery-section .item:hover .item-desc {
-    opacity: 0; /* Fully transparent when item is hovered */
-}
-
-.item-overlay-text {
-    padding: 0.625rem;
-    color: rgb(244, 244, 242);
-    max-width: 31.25rem; /* Widest paragraph text */
-    background-color: rgba(73, 84, 100, 0.8);
-    border-radius: 0.625rem;
-    z-index: 3;
-}
-
-.gallery-section .item:hover {
-    transform: scale(1.05);
 }
