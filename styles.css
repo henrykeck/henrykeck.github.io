@@ -166,7 +166,7 @@ main {
     position: relative;
     width: 100%; 
     padding: 40px 20px; 
-    background-image: url('artifacts/content-photos/filler/marble_wallpaper-desktop.jpg'); 
+    background-image: url('artifacts/content-photos/filler/marble_wallpaper-desktop.webp'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -313,39 +313,39 @@ main {
 }
 
 .grid-item:nth-child(1) {
-    background-image: url('artifacts/content-photos/wallcovering-types/residential_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/residential_square.webp');
 }
 
 .grid-item:nth-child(2) {
-    background-image: url('artifacts/content-photos/wallcovering-types/commercial_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/commercial_square.webp');
 }
 
 .grid-item:nth-child(3) {
-    background-image: url('artifacts/content-photos/wallcovering-types/fabric_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/fabric_square.webp');
 }
 
 .grid-item:nth-child(4) {
-    background-image: url('artifacts/content-photos/wallcovering-types/mural_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/mural_square.webp');
 }
 
 .grid-item:nth-child(5) {
-    background-image: url('artifacts/content-photos/wallcovering-types/sisal_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/sisal_square.webp');
 }
 
 .grid-item:nth-child(6) {
-    background-image: url('artifacts/content-photos/wallcovering-types/whiteboard_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/whiteboard_square.webp');
 }
 
 .grid-item:nth-child(7) {
-    background-image: url('artifacts/content-photos/wallcovering-types/wood_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/wood_square.webp');
 }
 
 .grid-item:nth-child(8) {
-    background-image: url('artifacts/content-photos/wallcovering-types/panel_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/panel_square.webp');
 }
 
 .grid-item:nth-child(9) {
-    background-image: url('artifacts/content-photos/wallcovering-types/foil_square.jpg');
+    background-image: url('artifacts/content-photos/wallcovering-types/foil_square.webp');
 }
 
 /*
@@ -607,7 +607,7 @@ footer > p {
     }
 
     .serving::before {
-        background-image: url('artifacts/content-photos/filler/marble_wallpaper-mobile.jpg');
+        background-image: url('artifacts/content-photos/filler/marble_wallpaper-mobile.webp');
     }
 
 
@@ -758,6 +758,6 @@ footer > p {
 
 @media (max-width: 1440px) and (min-width: 933px) {
     .serving::before {
-        background-image: url('artifacts/content-photos/filler/marble_wallpaper-desktop.jpg');
+        background-image: url('artifacts/content-photos/filler/marble_wallpaper-desktop.webp');
     }
 }
