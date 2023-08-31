@@ -762,14 +762,14 @@ footer > p {
     }
 }
 
-.game-section {
+.gallery-section {
     width: 90%;
     max-width: 90%;
     padding: 50px;
     overflow: hidden;
 }
 
-.game-section .custom-carousel {
+.gallery-section .carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -779,11 +779,11 @@ footer > p {
     padding: 15px 40px;
 }
 
-.game-section .custom-carousel::-webkit-scrollbar {
+.gallery-section .carousel::-webkit-scrollbar {
     display: none;
 }
 
-.game-section .item {
+.gallery-section .item {
     /* flex: 0 0 320px; Removed this */
     flex-shrink: 0; /* Add this to prevent items from shrinking */
     height: 400px;
@@ -797,14 +797,14 @@ footer > p {
     backface-visibility: hidden;
 }
 
-.game-section .item .image-wrapper {
+.gallery-section .item .image-wrapper {
     position: relative;
     height: 100%;
     width: auto; /* Flexible width based on the image */
     overflow: hidden;
 }
 
-.game-section .item .carousel-image {
+.gallery-section .item .carousel-image {
     display: block;
     max-width: 100%;
     max-height: 100%;
@@ -814,7 +814,7 @@ footer > p {
     position: relative;
 }
 
-.game-section .item::before {
+.gallery-section .item::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -826,8 +826,8 @@ footer > p {
     z-index: 2;
 }
 
-.game-section .item:after,
-.game-section .image-wrapper:after {
+.gallery-section .item:after,
+.gallery-section .image-wrapper:after {
     content: "";
     display: block;
     position: absolute;
@@ -839,7 +839,7 @@ footer > p {
     background-image: linear-gradient(transparent 50%, rgba(73, 84, 100, 0.6));
     z-index: 1;
 }
-.game-section .item-desc {
+.gallery-section .item-desc {
     padding: 0 24px 12px;
     color: rgb(244, 244, 242);
     position: absolute;
@@ -851,7 +851,7 @@ footer > p {
     transition: opacity 0.5s; /* Add a smooth transition for the fade effect */
 }
 
-.game-section .item:hover .item-desc {
+.gallery-section .item:hover .item-desc {
     opacity: 0; /* Fully transparent when item is hovered */
 }
 
@@ -864,6 +864,6 @@ footer > p {
     z-index: 3;
 }
 
-.game-section .item:hover {
+.gallery-section .item:hover {
     transform: scale(1.05);
 }
