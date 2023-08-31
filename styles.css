@@ -853,11 +853,12 @@ footer > p {
 .item-overlay-text {
     padding: 10px;
     color: rgb(244, 244, 242);
+    max-width: 500px; /* Widest paragraph text */
     background-color: rgba(73, 84, 100, 0.8);
     border-radius: 10px;
     z-index: 3;
 }
 
 .game-section .item:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
