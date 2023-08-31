@@ -818,7 +818,8 @@ footer > p {
     z-index: 2;
 }
 
-.game-section .item:after {
+.game-section .item:after,
+.game-section .image-wrapper:after {
     content: "";
     display: block;
     position: absolute;
@@ -830,7 +831,6 @@ footer > p {
     background-image: linear-gradient(rgba(73, 84, 100, 0), rgba(73, 84, 100, 0.95)); /* Start from transparent to 80% opacity */
     z-index: 1;
 }
-
 
 .game-section .item-desc {
     padding: 0 24px 12px;
