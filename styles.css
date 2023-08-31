@@ -843,12 +843,8 @@ footer > p {
 }
 
 .item-overlay-text {
-    padding: 2px 2px;
+    padding: 10px;
     color: rgb(244, 244, 242);
-    position: absolute;
-    width: calc(100% - 48px);
-    transform: translate(-50%, -50%);
-    text-align: center;
     background-color: rgba(73, 84, 100, 0.8);
     border-radius: 10px;
     z-index: 3;
