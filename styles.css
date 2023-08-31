@@ -13,7 +13,7 @@ body {
 p {
     max-width: 500px; /* Adjust as needed depending on the font and size */
     font-family: 'Candara', sans-serif; /* Use a common font */
-    font-size: 18px; /* Adjust size accordingly */
+    font-size: 1rem; /* Adjust size accordingly */
 }
 
 /* Header */
@@ -40,7 +40,7 @@ nav ul {
 nav li a {
     text-decoration: none;
     color: rgb(73, 84, 100);
-    font-size: 18px;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
@@ -114,7 +114,7 @@ main {
     margin: 0;
     padding: 10px 0px;
     font-family: 'Candara', sans-serif;
-    font-size: 26px;
+    font-size: 1.75rem;
     color: rgb(244, 244, 242);
 }
 
@@ -150,7 +150,7 @@ main {
     color: rgb(73, 84, 100);
     font-family: 'Arial', sans-serif;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .content-container {
@@ -244,7 +244,7 @@ main {
     color: rgb(244, 244, 242);
     font-family: 'Arial', sans-serif;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .wall-coverings-wrapper {
@@ -563,7 +563,7 @@ footer > p {
     p {
         max-width: 600px; /* Adjust as needed depending on the font and size */
         font-family: 'Candara', sans-serif; /* Use a common font */
-        font-size: 18px; /* Adjust size accordingly */
+        font-size: 1rem; /* Adjust size accordingly */
     }  
 
     /* Adjust logo sizes */
@@ -581,14 +581,14 @@ footer > p {
         color: rgb(73, 84, 100);
         font-family: 'Arial', sans-serif;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 0.75rem;
     }
     
     .info-section a {
         color: rgb(244, 244, 242);
         font-family: 'Arial', sans-serif;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 0.75rem;
     }
 
     /* .inspirational {
@@ -680,7 +680,7 @@ footer > p {
     }    
     
     .wall-coverings.carousel-view .grid-item span {
-        font-size: 12px;
+        font-size: 0.75rem;
         position: absolute; /* Position absolutely inside the grid-item */
         top: 50%; 
         left: 50%;
