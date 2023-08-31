@@ -170,9 +170,6 @@ main {
 }
 
 .serving {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    gap: 1.25rem;
     position: relative;
     width: 100%; 
     padding: 2.5rem 1.25rem; 
@@ -181,7 +178,6 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 0.625rem;
-    z-index: 1; 
     align-items: center;
 }
 
@@ -202,20 +198,9 @@ main {
 }
 
 .serving-content {
-    grid-column: 3;
     align-self: center;
-    width: 100%;
-    padding: 1.25rem;
-    border-radius: 0.625rem;
-    color: rgb(73, 84, 100);
-    margin-bottom: 1.25rem;
-    box-sizing: border-box;
-}
-
-.text-background {
-    background-color: rgba(244, 244, 242, 0.8);
-    border-radius: 0.625rem;
-    padding: 1.25rem;
+    width: fit-content;
+    padding: 0 0 0 19rem;
 }
 
 .info-section {
@@ -382,8 +367,9 @@ ABOUT PAGE'S CSS
 }
 
 .text-background {
-    padding: 1rem;             /* Adds some padding to the textual content for better spacing */
-    background-color: rgba(244, 244, 242, 0.7); /* Optional: If you want a semi-transparent background for better text readability */
+    background-color: rgba(244, 244, 242, 0.8);
+    border-radius: 0.625rem;
+    width: fit-content;
 }
 
 /* Adjusting h2 and p for finer typography details, adjust as per your design */
@@ -611,11 +597,6 @@ footer > p {
     .serving {
         display: none;
     }
-
-    .serving::before {
-        background-image: url('artifacts/content-photos/filler/marble_wallpaper-mobile.webp');
-    }
-
 
     /* Info Section */
     .info-section {
