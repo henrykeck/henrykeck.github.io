@@ -68,14 +68,22 @@
                     </li>
                 </ul>
             </nav>
-            <img src="../artifacts/logo-slim.png" alt="Keck Paperhanging" id="company-logo-slim">
+            <img src="../artifacts/logos/logo-slim.png" alt="Keck Paperhanging small logo" id="company-logo-slim">
         </header>
 
         <!-- Main content -->
         <main>
             <!-- Inspirational section -->
             <section class="inspirational">
-                <img src="../artifacts/blue_vertical_stripe.jpg" alt="Inspirational Wallpaper">
+                <img 
+                    srcset="
+                        artifacts/content-photos/headers/green_stripe-mobile.jpg 932w, 
+                        artifacts/content-photos/headers/green_stripe-desktop.jpg 1440w,
+                        artifacts/content-photos/headers/green_stripe.jpg 1920w"
+                    sizes="(max-width: 932px) 932px, (max-width: 1440px) 1440px, 1920px"
+                    src="artifacts/content-photos/headers/green_stripe.jpg"
+                    alt="In progress wallpaper installation" 
+                />
                 <div class="overlay-text">
                     <p>Keck Paperhanging: A legacy of precision, passion, and unmatched craftsmanship in the world of wallpapering.</p>
                     <button><a href="mailto:contact@keckpaperhanging.com">CONTACT</a></button>
