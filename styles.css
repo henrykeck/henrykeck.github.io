@@ -308,14 +308,15 @@ main {
 
     &:hover {
         transform: rotate(3deg) scale(1.05);
+        box-shadow: -0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.3);
         z-index: 1;
-        box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
     }
 
     &.selected {
         border: 0.625rem solid rgb(187, 191, 202);
         width: 11.25rem;
         outline: 0.625rem solid transparent;
+        box-shadow: -0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.15);
     }
 }
 
@@ -788,7 +789,7 @@ RESPONSIVENESS
         height: 11.25rem;
         aspect-ratio: 1/1;
         position: relative;
-        box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+        /* box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5); */
         border-radius: 0.625rem;
         display: flex;
         color: rgb(244, 244, 242);
@@ -799,12 +800,13 @@ RESPONSIVENESS
 
     .wall-coverings.carousel-view .grid-item:hover {
         transform: none;
-        box-shadow: none;
+        box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
     }
 
     .wall-coverings.carousel-view .grid-item.selected {
         border: 0.625rem solid rgb(187, 191, 202);
         box-sizing: border-box;
+        box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
     }    
     
     .wall-coverings.carousel-view .grid-item span {
