@@ -309,7 +309,7 @@ main {
 
     &:hover {
         transform: rotate(3deg) scale(1.05);
-        box-shadow: -0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.3);
+        box-shadow: -0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.15);
         z-index: 1;
     }
 
@@ -801,13 +801,13 @@ RESPONSIVENESS
 
     .wall-coverings.carousel-view .grid-item:hover {
         transform: none;
-        box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+        box-shadow: -0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.15)
     }
 
     .wall-coverings.carousel-view .grid-item.selected {
         border: 0.625rem solid rgb(187, 191, 202);
         box-sizing: border-box;
-        box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+        box-shadow: -0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.15)
     }    
     
     .wall-coverings.carousel-view .grid-item span {
