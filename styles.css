@@ -63,10 +63,10 @@ nav li a {
 .icon-wrapper {
     display: flex;
     align-items: center;
-    gap: 0.5rem;  /* adjust this value based on your needs */
+    gap: 0.5rem;
     padding: 0.5rem;
     box-sizing: border-box;
-    border: 0.063rem solid transparent;  /* Transparent border */
+    border: 0.063rem solid transparent;
     border-radius: 0.5rem;
     transition: border 0.3s ease;
 }
