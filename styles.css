@@ -174,7 +174,7 @@ main {
     grid-column: 2;
     padding: 0 10px; /* optional padding to ensure there's some space between the image and the grid boundaries */
 }
-#dave-portrait {
+#dave-portrait, #dave-fun {
     max-width: 100%;
     height: auto;
     width: 60%;
@@ -352,7 +352,7 @@ ABOUT PAGE'S CSS
     padding-bottom: 50px;      /* Add bottom padding */
 }
 
-.dave-portrait {
+#dave-fun {
     width: 60%;
     margin-right: 0;
     margin-right: 0;
@@ -720,7 +720,7 @@ footer > p {
         gap: 20px;
     }
 
-    .dave-portrait {
+    #dave-fun {
         max-width: 100%;
         height: auto;
         width: 100%;
