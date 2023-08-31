@@ -113,12 +113,26 @@ function handleGridItemClick(index) {
 
 // Utility to center and highlight the selected item
 function centerAndHighlightItem(index) {
+    const item = carouselItems[index];
+
+    const carousel = item.parentElement;
+    const scrollLeft = item.offsetLeft - (carousel.offsetWidth / 2) + (item.offsetWidth / 2);
+    carousel.scroll({
+        top: 0,
+        left: scrollLeft,
+        behavior: 'smooth'
+    });
+
     carouselItems[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     carouselItems.forEach(item => item.classList.remove('selected'));
     carouselItems[index].classList.add('selected');
     updateActiveDot(index);
     updateDescriptionBasedOnType(index);
 }
+
+carouselItems.forEach((item, index) => {
+    item.addEventListener('click', () => handleGridItemClick(index));
+});
 
 // Utilities for Carousel behaviors
 function updateActiveDot(index) {
@@ -168,19 +182,19 @@ if ('serviceWorker' in navigator) {
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const items = document.querySelectorAll('.custom-carousel .item');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const items = document.querySelectorAll('.custom-carousel .item');
 
-    items.forEach(function(item) {
-        item.addEventListener('click', function() {
-            const carousel = item.parentElement;
-            const scrollLeft = item.offsetLeft - (carousel.offsetWidth / 2) + (item.offsetWidth / 2);
-            carousel.scroll({
-                top: 0,
-                left: scrollLeft,
-                behavior: 'smooth'
-            });
-        });
-    });
-});
+//     items.forEach(function(item) {
+//         item.addEventListener('click', function() {
+//             const carousel = item.parentElement;
+//             const scrollLeft = item.offsetLeft - (carousel.offsetWidth / 2) + (item.offsetWidth / 2);
+//             carousel.scroll({
+//                 top: 0,
+//                 left: scrollLeft,
+//                 behavior: 'smooth'
+//             });
+//         });
+//     });
+// });
   
