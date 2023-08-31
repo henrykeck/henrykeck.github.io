@@ -53,7 +53,7 @@ function getDescription(type, targetDiv) {
     fetch(fileURL)
         .then(response => response.ok ? response.text() : Promise.reject('Network response was not ok'))
         .then(text => {
-            const lines = text.split('\n').filter(line => line.trim() !== '');
+            const   lines = text.split('\n').filter(line => line.trim() !== '');
             let formattedText;
 
             // Check if it's the carousel view by the display property of the element
@@ -74,7 +74,7 @@ function getDescription(type, targetDiv) {
         .catch(error => {
             console.log('Fetch operation error:', error);
             targetDiv.innerHTML = 'Description not found.';
-        });
+        }); 
 }
 
 // DOM elements
@@ -168,14 +168,19 @@ if ('serviceWorker' in navigator) {
 }
 
 
-$(".custom-carousel").owlCarousel({
-    autoWidth: true,
-    loop: true
-  });
-  $(document).ready(function () {
-    $(".custom-carousel .item").click(function () {
-      $(".custom-carousel .item").not($(this)).removeClass("active");
-      $(this).toggleClass("active");
+document.addEventListener('DOMContentLoaded', function() {
+    const items = document.querySelectorAll('.custom-carousel .item');
+
+    items.forEach(function(item) {
+        item.addEventListener('click', function() {
+            const carousel = item.parentElement;
+            const scrollLeft = item.offsetLeft - (carousel.offsetWidth / 2) + (item.offsetWidth / 2);
+            carousel.scroll({
+                top: 0,
+                left: scrollLeft,
+                behavior: 'smooth'
+            });
+        });
     });
-  });
+});
   
