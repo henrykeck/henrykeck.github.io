@@ -763,6 +763,8 @@ footer > p {
 }
 
 .game-section {
+    width: 90%;
+    max-width: 90%;
     padding: 50px;
     overflow: hidden;
 }
