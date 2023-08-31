@@ -797,16 +797,22 @@ footer > p {
     backface-visibility: hidden;
 }
 
-.game-section .item .carousel-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.game-section .item .image-wrapper {
+    position: relative;
     height: 100%;
-    object-fit: contain; /* Changed from cover to contain */
-    z-index: 0;
+    width: auto; /* Flexible width based on the image */
+    overflow: hidden;
 }
 
+.game-section .item .carousel-image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto; /* Center the image */
+    position: relative;
+}
 
 .game-section .item::before {
     content: "";
