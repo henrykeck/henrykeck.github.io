@@ -836,7 +836,7 @@ footer > p {
     left: 0;
     top: 0;
     border-radius: 16px; /* Ensuring pseudo-element has rounded corners */
-    background-image: linear-gradient(transparent 50%, rgba(73, 84, 100, 0.8));
+    background-image: linear-gradient(transparent 50%, rgba(73, 84, 100, 0.6));
     z-index: 1;
 }
 
