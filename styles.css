@@ -559,7 +559,7 @@ GALLERY PAGE
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding: 1rem 2.5rem;
+    /* padding: 1rem 2.5rem; */
 }
 
 .gallery-section .carousel::-webkit-scrollbar {
