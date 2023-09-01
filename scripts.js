@@ -4,23 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     gridItems.forEach(item => {
         item.addEventListener('click', function() {
-            // Remove .selected class from other items
             gridItems.forEach(i => i.classList.remove('selected'));
-
-            // Add .selected to the clicked item
             item.classList.add('selected');
-
-            // Fetch and update the description based on clicked item
             getDescription(item.querySelector('span').textContent.trim(), descriptionDiv);
         });
     });
 
-    // Default to the first item
     gridItems[0].click();
 });
 
 function craftEmail() {
-    // Get values
     const firstName = document.getElementById('first-name').value;
     const lastName = document.getElementById('last-name').value;
     const email = document.getElementById('email').value;
@@ -29,7 +22,6 @@ function craftEmail() {
     const contactPreference = document.querySelector('input[name="contact-preference"]:checked').value;
     const details = document.getElementById('details').value;
 
-    // Create email subject and body
     const subject = encodeURIComponent(`${firstName} ${lastName}'s Request for Wallpaper Consultation`);
     const body = encodeURIComponent(
         `Contact: \n` +
@@ -41,7 +33,6 @@ function craftEmail() {
         `${details}`
     );
 
-    // Open email client
     window.location.href = `mailto:dave@keckpaperhanging.com?subject=${subject}&body=${body}`;
 }
 
@@ -56,14 +47,11 @@ function getDescription(type, targetDiv) {
             const   lines = text.split('\n').filter(line => line.trim() !== '');
             let formattedText;
 
-            // Check if it's the carousel view by the display property of the element
             const carouselElement = document.querySelector('.wall-coverings.carousel-view');
             if (carouselElement && getComputedStyle(carouselElement).display !== 'none') {
-                // Carousel view: Display only the first h2 and the first p
-                formattedText = `<h2>${lines[0]}</h2>`; // Assuming the first line is always h2
-                if (lines[1]) formattedText += `<p>${lines[1]}</p>`; // Append the first p if it exists
+                formattedText = `<h2>${lines[0]}</h2>`;
+                if (lines[1]) formattedText += `<p>${lines[1]}</p>`;
             } else {
-                // Not carousel view: Display everything
                 formattedText = lines.map((line, index) => 
                     index === 0 ? `<h2>${line}</h2>` : `<p>${line}</p>`
                 ).join('');
@@ -77,21 +65,19 @@ function getDescription(type, targetDiv) {
         }); 
 }
 
-// DOM elements
 const carouselItems = document.querySelectorAll('.wall-coverings.carousel-view .grid-item');
 const indicatorsContainer = document.querySelector('.carousel-indicators');
 const carouselView = document.querySelector('.wall-coverings.carousel-view');
 
-let isProgrammaticScroll = false; // New flag
+let isProgrammaticScroll = false;
 
 // Handlers
 let lastSelectedIndex = 0;
 
 function handleDotClick(index) {
-    isProgrammaticScroll = true;  // Set the flag
+    isProgrammaticScroll = true;
     centerAndHighlightItem(index);
-    
-    // After a delay, reset the flag
+
     setTimeout(() => {
         isProgrammaticScroll = false;
     }, 500); 
@@ -100,10 +86,9 @@ function handleDotClick(index) {
 }
 
 function handleGridItemClick(index) {
-    isProgrammaticScroll = true;  // Set the flag
+    isProgrammaticScroll = true;
     centerAndHighlightItem(index);
-    
-    // After a delay, reset the flag
+
     setTimeout(() => {
         isProgrammaticScroll = false;
     }, 500);
@@ -156,7 +141,6 @@ for (let i = 0; i < carouselItems.length; i++) {
 // Initial setup
 updateDescriptionBasedOnType(0);
 
-
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
@@ -166,7 +150,6 @@ if ('serviceWorker' in navigator) {
         });
     });
 }
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const items = document.querySelectorAll('.custom-carousel .item');
