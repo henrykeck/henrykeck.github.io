@@ -1,0 +1,191 @@
+#home-page a[href="/"] .icon-wrapper,
+#about-page a[href="/about/"] .icon-wrapper,
+#gallery-page a[href="/gallery/"] .icon-wrapper,
+#estimator-page a[href="/estimator/"] .icon-wrapper {
+    border: 0.063rem solid rgb(73, 84, 100);
+}
+
+.estimating {
+    max-width: 80%;
+    position: relative;
+    padding: 2.5rem 1.25rem;
+    margin: 2rem 1.5rem;
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    background-image: url('../artifacts/content-photos/filler/empty_livingroom-desktop.webp');
+    background-size: auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.estimating .text-background {
+    background-color: rgba(244, 244, 242, 0.8);
+}
+
+.estimating a {
+    color:rgb(73, 84, 100);
+}
+
+.estimation-101 {
+    display: block;
+}
+
+/* Container for room modeling */
+.wallpaper-estimator {
+    flex: 1;
+    display: flex; 
+    flex-direction: column;
+    align-items: left; 
+    justify-content: center;
+    margin: 1.875rem;
+    background-color: rgba(244, 244, 242, 0.9);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 0.625rem 0.625rem; 
+    border-radius: 0.625rem;
+    min-width: 375px;
+    max-width: 95%;
+}
+
+.wallpaper-estimator #result {
+    display: flex;
+    justify-content: center;
+}
+
+.room-modeling::after {
+    margin: 1rem;
+}
+
+.wallpaper-estimator::after {
+    padding: 1.25rem; 
+    border-radius: 0.25rem;
+    border-color: rgba(73, 84, 100, 0.6);
+    border-width: 0.063rem;
+    border-style: solid;
+}
+
+#room-modeling .button-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem; 
+    margin: 1rem;
+}
+
+#wall-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0.5rem;
+}
+
+#wall-container p {
+    font-size: larger;
+    font-weight: 500;
+    margin: 0;
+}
+
+#wall-container .wall-inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+#wall-container .wall-inputs label {
+    max-width: 5rem;
+    padding: 0.25rem;
+}
+
+#wall-container .wall-inputs input {
+    max-width: 2.5rem;
+    padding: 0.5rem;
+}
+
+.material-modeling {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+#material {
+    margin: 0 0 0.75rem;
+}
+
+#material-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#material-input label,
+#material-input input {
+    max-width: 2.5rem;
+    padding: 0.5rem 0.25rem 0.5rem;
+}
+
+.wallpaper-estimator button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 0.5rem 0;
+    background-color: rgb(73, 84, 100);
+    color: rgb(244, 244, 242);
+    width: auto; 
+    display: block; 
+}
+
+input::-webkit-textfield-decoration-container {
+    font-size: 0.5rem;
+}
+
+.wall .contenteditable {
+    font-size: 1rem;
+}
+
+button:hover {
+    filter: brightness(90%);
+}
+
+@media only screen and (max-width: 932px)  {
+    .estimating {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .wallpaper-estimator {
+        margin: 0.5rem;
+        max-width: 95%;
+        min-width: auto;
+    }
+
+    .wall {
+        max-width: 80%;
+    }
+
+    #wall-container {
+        max-width: 85%;
+        margin: 0;
+    }
+
+    #wall-container .wall-inputs {
+        flex-direction: column;
+    }
+
+    .estimation-101 {
+        display: none;
+    }
+
+    h3 {
+        margin: 0.25rem;
+        /* margin-block-start: 0.25rem; */
+    }
+
+    .text-background {
+        padding: 0.5rem;
+    }
+}

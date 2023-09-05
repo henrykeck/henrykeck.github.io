@@ -78,7 +78,8 @@ nav li a {
 
 #home-page a[href="/"] .icon-wrapper,
 #about-page a[href="/about/"] .icon-wrapper,
-#gallery-page a[href="/gallery/"] .icon-wrapper {
+#gallery-page a[href="/gallery/"] .icon-wrapper,
+#estimator-page a[href="/estimator/"] .icon-wrapper {
     border: 0.063rem solid rgb(73, 84, 100);
 }
 
@@ -376,6 +377,10 @@ FINAL SECTION - CONTACT SECTION
     padding: 1.25rem;
 }
 
+.contact-us a {
+    color:rgb(73, 84, 100)
+}
+
 .contact-info {
     flex: 1;
     padding: 1.875rem;
@@ -449,7 +454,7 @@ button {
     padding: 0.25rem 0.625rem; 
 }
 
-button {
+.contact-us button {
     padding: 0.625rem 1rem;
     background-color: rgb(73, 84, 100);
     color: rgb(244, 244, 242);
@@ -498,7 +503,13 @@ footer {
 }
 
 footer > p {
-    margin-top: 0.25rem; 
+  margin-top: 0.25rem; 
+}
+
+.footer-contact-info svg,
+.footer-contact-info a {
+    color: rgb(73, 84, 100);
+    /* margin: 0 0.5rem; */
 }
 
 

@@ -1,0 +1,128 @@
+class Material {
+    constructor(name, width, verticalRepeat = 0.0) {
+        this.name = name;
+        this.width = width;
+        this.verticalRepeat = verticalRepeat;
+    }
+}
+
+class Wall {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+}
+
+class Room {
+    constructor() {
+        this.walls = [];
+    }
+
+    addWall(height, width) {
+        let wall = new Wall(height, width);
+        this.walls.push(wall);
+        return wall;
+    }
+}
+
+function generateBasicRoom(height, wallsWidths) {
+    let room = new Room();
+    
+    for (let width of wallsWidths) {
+        room.addWall(height, width);
+    }
+    
+    return room;
+}
+
+function estimateLinearFeetForWall(wall, material) {
+    const widthsNeeded = Math.ceil(wall.width / material.width);
+    let totalInches = 0;
+
+    const inchesInRepeat = material.verticalRepeat;
+
+    for (let i = 0; i < widthsNeeded; i++) {
+        let adjustedHeight = wall.height;
+        if (inchesInRepeat !== 0) {
+            adjustedHeight = Math.ceil(adjustedHeight / inchesInRepeat) * inchesInRepeat;
+        }
+        totalInches += adjustedHeight;
+    }
+
+    return totalInches / 12; // convert inches to feet
+}
+
+function estimateMaterialForRoom(room, material) {
+    let totalLinearFeet = 0;
+    for (let wall of room.walls) {
+        totalLinearFeet += estimateLinearFeetForWall(wall, material);
+    }
+    return 1.1 * totalLinearFeet; // build in 10% for good measure
+}
+
+let wallCount = 1;
+
+document.getElementById('addWall').addEventListener('click', function() {
+    wallCount++;
+
+    if (wallCount > 4) {
+        alert("You've reached the maximum number of walls!");
+        addButton.disabled = true;
+        return;
+    }
+
+    const wallInputs = document.createElement('div');
+    wallInputs.classList.add('wall');
+    
+    wallInputs.innerHTML = `
+        <p>Wall ${wallCount}:</p>
+        <div class="wall-inputs">
+            <label for="wall${wallCount}Width">Width</label>
+            <input type="number" id="wall${wallCount}Width">
+
+            <label for="wall${wallCount}Height">Height</label>
+            <input type="number" id="wall${wallCount}Height">
+
+            <label for="units">Units</label>
+            <select class="measurement" id="wall-units">
+                <option value="inches">in</option>
+                <option value="feet">ft</option>
+                <option value="yards">yds</option>
+                <option value="centimeters">cm</option>
+                <option value="meters">m</option>
+            </select>
+        </div>
+    `;
+
+    document.getElementById('wall-container').appendChild(wallInputs);
+
+    if (wallCount == 4) {
+        const addButton = document.getElementById('addWall');
+        addButton.textContent = "Max Walls";
+        return;
+    }
+});
+
+document.getElementById('finishWalls').addEventListener('click', function() {
+    document.getElementById('room-modeling').style.display = 'none';
+    document.getElementById('material-input').style.display = 'block';
+});
+
+document.getElementById('calculate').addEventListener('click', function() {
+    const room = new Room();
+
+    // Populate room with walls from inputs
+    for (let i = 1; i <= wallCount; i++) {
+        let wallWidth = parseFloat(document.getElementById(`wall${i}Width`).value);
+        let wallHeight = parseFloat(document.getElementById(`wall${i}Height`).value);
+        room.addWall(wallHeight, wallWidth);
+    }
+
+    const materialWidth = parseFloat(document.getElementById('materialWidth').value);
+    const patternRepeat = parseFloat(document.getElementById('patternRepeat').value);
+    
+    const material = new Material("User Material", materialWidth, patternRepeat);
+    const totalLinearFeet = estimateMaterialForRoom(room, material);
+
+    document.getElementById('result').innerText = `You'll need approximately ${totalLinearFeet.toFixed(2)} linear feet of wallpaper.`;
+});
