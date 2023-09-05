@@ -176,20 +176,26 @@ button:hover {
         padding:  0.5rem 0;
     }
     
-    #wall-container .wall-inputs input {
+    #wall-container .wall-inputs input,
+    #material-input .material-modeling input {
         max-width: 1.5rem;
         padding: 0.25rem 0.125rem;
-        border: 0;
+        border-width: 0.06rem;
+        border-color: rgb(73, 84, 100);
     }
 
-    #wall-container .wall-inputs #wall-units {
+    #wall-container .wall-inputs #wall-units,
+    #material-input .material-modeling #pattern-units {
         max-width: 2.5rem;
+        border-width: 0.06rem;
+        border-color: rgb(73, 84, 100);
+        color: rgb(73, 84, 100)
     }
 
-    .wall-inputs label {
+    .wall-inputs label,
+    .material-modeling label {
         font-size: 0.75rem;
     }
-
     .estimation-101 {
         display: none;
     }
