@@ -35,6 +35,23 @@ function generateBasicRoom(height, wallsWidths) {
     return room;
 }
 
+function convertToInches(value, unit) {
+    switch(unit) {
+        case "inches":
+            return value;
+        case "feet":
+            return value * 12;
+        case "yards":
+            return value * 36; 
+        case "centimeters":
+            return value * 0.393701; // 1 cm is approx 0.393701 inches
+        case "meters":
+            return value * 39.3701; // 1 meter is approx 39.3701 inches
+        default:
+            return value; // default to returning the input value if unit is unknown
+    }
+}
+
 function estimateLinearFeetForWall(wall, material) {
     const widthsNeeded = Math.ceil(wall.width / material.width);
     let totalInches = 0;
