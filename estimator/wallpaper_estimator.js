@@ -142,8 +142,12 @@ document.getElementById('calculate').addEventListener('click', function() {
     const materialWidthRaw = parseFloat(document.getElementById('materialWidth').value);
     const patternUnit = document.getElementById('pattern-units').value; 
     const materialWidthInInches = convertToInches(materialWidthRaw, patternUnit);
+
+    // Fetch and convert the patternRepeat value
+    const patternRepeatRaw = parseFloat(document.getElementById('patternRepeat').value);
+    const patternRepeatInInches = convertToInches(patternRepeatRaw, patternUnit);    
     
-    const material = new Material("User Material", materialWidthInInches, patternRepeat);
+    const material = new Material("User Material", materialWidthInInches, patternRepeatInInches);
     const totalLinearFeet = estimateMaterialForRoom(room, material);
 
     document.getElementById('result').innerText = `You'll need approximately ${totalLinearFeet.toFixed(2)} linear feet of wallpaper.`;
