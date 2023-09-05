@@ -111,17 +111,22 @@ document.getElementById('finishWalls').addEventListener('click', function() {
 document.getElementById('calculate').addEventListener('click', function() {
     const room = new Room();
 
-    // Populate room with walls from inputs
     for (let i = 1; i <= wallCount; i++) {
         let wallWidth = parseFloat(document.getElementById(`wall${i}Width`).value);
         let wallHeight = parseFloat(document.getElementById(`wall${i}Height`).value);
+        
+        let unit = document.getElementById('wall-units').value; 
+        wallWidth = convertToInches(wallWidth, unit);
+        wallHeight = convertToInches(wallHeight, unit);
+
         room.addWall(wallHeight, wallWidth);
     }
 
-    const materialWidth = parseFloat(document.getElementById('materialWidth').value);
-    const patternRepeat = parseFloat(document.getElementById('patternRepeat').value);
+    const materialWidthRaw = parseFloat(document.getElementById('materialWidth').value);
+    const patternUnit = document.getElementById('pattern-units').value; 
+    const materialWidthInInches = convertToInches(materialWidthRaw, patternUnit);
     
-    const material = new Material("User Material", materialWidth, patternRepeat);
+    const material = new Material("User Material", materialWidthInInches, patternRepeat);
     const totalLinearFeet = estimateMaterialForRoom(room, material);
 
     document.getElementById('result').innerText = `You'll need approximately ${totalLinearFeet.toFixed(2)} linear feet of wallpaper.`;
