@@ -173,7 +173,21 @@ button:hover {
     }
 
     #wall-container .wall-inputs {
-        flex-direction: column;
+        padding:  0.5rem 0;
+    }
+    
+    #wall-container .wall-inputs input {
+        max-width: 1.5rem;
+        padding: 0.25rem 0.125rem;
+        border: 0;
+    }
+
+    #wall-container .wall-inputs #wall-units {
+        max-width: 2.5rem;
+    }
+
+    .wall-inputs label {
+        font-size: 0.75rem;
     }
 
     .estimation-101 {
