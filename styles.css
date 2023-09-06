@@ -195,24 +195,6 @@ main {
     align-items: center;
 }
 
-/* .portrait-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    grid-column: 2;
-    padding: 0 0.625rem;
-}
-
-#dave-portrait, */
-#dave-fun {
-    max-width: 100%;
-    height: auto;
-    width: 60%;
-    border-radius: 0.625rem;
-    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
-    margin: 0;
-}
-
 .serving-content {
     align-self: center;
     position:relative;
@@ -521,15 +503,26 @@ ABOUT PAGE'S CSS
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 3.125rem;
-    padding-bottom: 3.125rem;
+    /* padding-top: 3.125rem;
+    padding-bottom: 3.125rem; */
 }
 
-#dave-fun {
-    width: 60%;
-    margin-right: 0;
-    margin-right: 0;
-    display: block;
+.portrait-wrapper {
+    display: flex;
+    max-width: 90%;
+    height: auto;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 0.625rem;
+}
+
+#dave-family {
+    max-width: 100%;
+    width: 80%;
+    height: auto;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
+    margin: 0;
 }
 
 .about-content {
@@ -882,7 +875,17 @@ RESPONSIVENESS
         gap: 1.25rem;
     }
 
-    #dave-fun {
+    .portrait-wrapper {
+        display: flex;
+        max-width: 18.75rem;
+        width: 80%;
+        height: auto;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 0.625rem;
+    }
+
+    #dave-family {
         max-width: 100%;
         height: auto;
         width: 100%;
